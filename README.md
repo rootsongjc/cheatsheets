@@ -1,6 +1,6 @@
 # Cheatsheets
 
-Curated cheatsheets for developers 👉 ✨ https://jimmysong.io/cheatsheets/' ✨
+Curated cheatsheets for developers 👉 ✨ https://jimmysong.io/cheatsheets ✨
 
 **Home page**
 
