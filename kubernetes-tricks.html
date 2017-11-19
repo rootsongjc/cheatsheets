@@ -100,11 +100,11 @@
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20171119180351'
+'./assets/2017/style.css?t=20171119203549'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20171119180351'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20171119203549'>
 </noscript>
 
 <script type='application/ld+json'>
@@ -238,7 +238,7 @@ spec:
 
 <p>看似很简单，使用数组的方式定义，所有命令使用跟 Dockerfile 中的 CMD 配置是一样的，但是有一点不同的是，<code>bootsttap.sh</code> 必须具有可执行权限，否则容器启动时会出错。</p>
 
-<p>###让Pod调用宿主机的docker能力</p>
+<h3 id="让pod调用宿主机的docker能力">让Pod调用宿主机的docker能力</h3>
 
 <p>我们可以想象一下这样的场景，让 Pod 来调用宿主机的 docker 能力，只需要将宿主机的 <code>docker</code> 命令和 <code>docker.sock</code> 文件挂载到 Pod 里面即可，如下：</p>
 
@@ -1018,8 +1018,8 @@ module.exports = on
 
 /***/ })
 /******/ ]);</script>
-<script src='./assets/packed/vendor.js?t=20171119180351'></script>
-<script src='./assets/packed/app.js?t=20171119180351'></script>
+<script src='./assets/packed/vendor.js?t=20171119203549'></script>
+<script src='./assets/packed/app.js?t=20171119203549'></script>
 <script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-bash.min.js'></script><script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-yaml.min.js'></script>
 
 
