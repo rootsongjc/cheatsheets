@@ -55,7 +55,7 @@ command: ["/bin/bash","-c","bootstrap.sh"]
 
 看似很简单，使用数组的方式定义，所有命令使用跟 Dockerfile 中的 CMD 配置是一样的，但是有一点不同的是，`bootsttap.sh` 必须具有可执行权限，否则容器启动时会出错。
 
-###让Pod调用宿主机的docker能力
+### 让Pod调用宿主机的docker能力
 
 我们可以想象一下这样的场景，让 Pod 来调用宿主机的 docker 能力，只需要将宿主机的 `docker` 命令和 `docker.sock` 文件挂载到 Pod 里面即可，如下：
 
