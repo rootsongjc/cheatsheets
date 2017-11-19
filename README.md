@@ -12,4 +12,4 @@ Curated cheatsheets for developers 👉 ✨ https://jimmysong.io/cheatsheets/' �
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for developer notes.
 
-Theme by [Devhints](https://devhint.io).
+Theme by [devhints](https://devhints.io).
