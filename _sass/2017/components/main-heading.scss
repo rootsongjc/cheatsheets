@@ -1,0 +1,63 @@
+/*
+ * The top-level heading
+ */
+
+.main-heading {
+  @include heading-style;
+
+  & {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  & > h1 {
+    @include font-size(8);
+    line-height: 1.2;
+    font-weight: 200;
+    font-family: $body-font;
+    margin: 0;
+  }
+
+  & > h1 > em {
+    font-style: normal;
+    color: lighten($gray-text, 20%);
+  }
+}
+
+.main-heading.-center {
+  & > h1 {
+    text-align: center;
+  }
+
+  & > .adbox {
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  & > .adbox > .ad {
+    display: inline-block;
+  }
+
+  & > .adbox > .ad.-carbon {
+    margin-top: 16px;
+  }
+
+  // Horizontal line
+  // (no need for now)
+  // & > .adbox > .ad.-codesponsor::before {
+  //   content: '';
+  //   display: block;
+  //   margin: 8px auto 24px auto;
+  //   width: 64px;
+  //   height: 1px;
+  //   background: lighten($gray-text, 40%);
+  // }
+}
+
+/**
+ * Add some space in preview mode
+ */
+
+.PreviewMode .main-heading {
+  margin-top: 16px;
+}
