@@ -23,25 +23,25 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='./assets/favicon.png' rel='shortcut icon'>
-<meta content='/cron.html' name='app:pageurl'>
+<meta content='/unicode.html' name='app:pageurl'>
 
 
-  <title>Cron cheatsheet</title>
-  <meta content='Cron cheatsheet' property='og:title'>
-  <meta content='Cron cheatsheet' property='twitter:title'>
+  <title>Unicode cheatsheet</title>
+  <meta content='Unicode cheatsheet' property='og:title'>
+  <meta content='Unicode cheatsheet' property='twitter:title'>
   <meta content='article' property='og:type'>
 
 
 
 
 
-  <meta content="The one-page guide to Cron: usage, examples, links, snippets, and more." name="description">
-  <meta content="The one-page guide to Cron: usage, examples, links, snippets, and more." property="og:description">
-  <meta content="The one-page guide to Cron: usage, examples, links, snippets, and more." property="twitter:description">
+  <meta content="The one-page guide to Unicode: usage, examples, links, snippets, and more." name="description">
+  <meta content="The one-page guide to Unicode: usage, examples, links, snippets, and more." property="og:description">
+  <meta content="The one-page guide to Unicode: usage, examples, links, snippets, and more." property="twitter:description">
 
 
-<link rel="canonical" href="https://jimmysong.io/cheatsheets/cron">
-<meta name="og:url" content="https://jimmysong.io/cheatsheets/cron">
+<link rel="canonical" href="https://jimmysong.io/cheatsheets/unicode">
+<meta name="og:url" content="https://jimmysong.io/cheatsheets/unicode">
 
 
 
@@ -57,7 +57,7 @@
 
 
 
-  <meta content='Linux' property='article:section'>
+  <meta content='Others' property='article:section'>
 
 
 
@@ -111,9 +111,9 @@
     "@type": "WebPage",
     "@id": "https://google.com/article"
   },
-  "headline": "Cron cheatsheet",
+  "headline": "Unicode cheatsheet",
   "image": [ null ],
-  "description": "The one-page guide to Cron: usage, examples, links, snippets, and more."
+  "description": "The one-page guide to Unicode: usage, examples, links, snippets, and more."
 }
 </script>
 <script type='application/ld+json'>
@@ -124,15 +124,15 @@
     "@type": "ListItem",
     "position": 1,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/#linux",
-      "name": "Linux"
+      "@id": "https://jimmysong.io/cheatsheets/#others",
+      "name": "Others"
     }
   },{
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/cron",
-      "name": "Cron"
+      "@id": "https://jimmysong.io/cheatsheets/unicode",
+      "name": "Unicode"
     }
   }]
 }
@@ -158,8 +158,8 @@
       <div class='actions'>
         
 <ul class="social-list social page-actions">
-  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/cron.html" target="share"><span class="text"></span></a></li>
-  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Cron.%20https://jimmysong.io/cheatsheets/cron.html" target="share"><span class="text"></span></a></li>
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/unicode.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Unicode.%20https://jimmysong.io/cheatsheets/unicode.html" target="share"><span class="text"></span></a></li>
   
 </ul>
 
@@ -167,7 +167,7 @@
         
           <ul class='page-actions'>
             <li class='link github -button hint--bottom' data-hint='Edit this page on GitHub'>
-              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/cron.md'>
+              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/unicode.md'>
                 <span class='text -visible'>Edit</span>
               </a>
             </li>
@@ -181,7 +181,7 @@
 
 <div class='body-area'>
   <header class='main-heading -center' role='banner'>
-    <h1 class='h1'>Cron <em>cheatsheet</em></h1>
+    <h1 class='h1'>Unicode <em>cheatsheet</em></h1>
   </header>
 
   
@@ -191,72 +191,151 @@
   
 
   <main class='post-content MarkdownBody' data-js-main-body role='main'>
-    <h2 class="-two-column" id="format">Format</h2>
+    <h2 id="unicode">Unicode</h2>
+<h3 id="中文字符范围">中文字符范围</h3>
 
-<h3 id="format-1">Format</h3>
-
-<pre class="-setup"><code>Min  Hour Day  Mon  Weekday
-</code></pre>
-
-<pre><code>*    *    *    *    *  command to be executed
-</code></pre>
-
-<pre class="-setup -box-chars"><code>┬    ┬    ┬    ┬    ┬
-│    │    │    │    └─  Weekday  (0=Sun .. 6=Sat)
-│    │    │    └──────  Month    (1..12)
-│    │    └───────────  Day      (1..31)
-│    └────────────────  Hour     (0..23)
-└─────────────────────  Minute   (0..59)
-</code></pre>
-
-<h3 id="examples">Examples</h3>
+<p class="-prime">中文字符的范围比较广，以下使用十六进制表示：</p>
 
 <table>
   <thead>
     <tr>
-      <th>Example</th>
-      <th>Description</th>
+      <th><strong>字符集</strong></th>
+      <th><strong>字数</strong></th>
+      <th><strong>Unicode 编码</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>0 * * * *</code></td>
-      <td>every hour</td>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=jbhz">基本汉字</a></td>
+      <td>20902字</td>
+      <td>4E00-9FA5</td>
     </tr>
     <tr>
-      <td><code>*/15 * * * *</code></td>
-      <td>every 15 mins</td>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=jbhzbc">基本汉字补充</a></td>
+      <td>38字</td>
+      <td>9FA6-9FCB</td>
     </tr>
     <tr>
-      <td><code>0 */2 * * *</code></td>
-      <td>every 2 hours</td>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=kza">扩展A</a></td>
+      <td>6582字</td>
+      <td>3400-4DB5</td>
     </tr>
     <tr>
-      <td><code>0 0 0 * 0</code></td>
-      <td>every Sunday midnight</td>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=kzb">扩展B</a></td>
+      <td>42711字</td>
+      <td>20000-2A6D6</td>
     </tr>
-  </tbody>
-  <tbody>
     <tr>
-      <td><code>@reboot</code></td>
-      <td>every reboot</td>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=kzc">扩展C</a></td>
+      <td>4149字</td>
+      <td>2A700-2B734</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=kzd">扩展D</a></td>
+      <td>222字</td>
+      <td>2B740-2B81D</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=kxbs">康熙部首</a></td>
+      <td>214字</td>
+      <td>2F00-2FD5</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=bskz">部首扩展</a></td>
+      <td>115字</td>
+      <td>2E80-2EF3</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=jrhz">兼容汉字</a></td>
+      <td>477字</td>
+      <td>F900-FAD9</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=jrkz">兼容扩展</a></td>
+      <td>542字</td>
+      <td>2F800-2FA1D</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=puabj">PUA(GBK)部件</a></td>
+      <td>81字</td>
+      <td>E815-E86F</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=bjkz">部件扩展</a></td>
+      <td>452字</td>
+      <td>E400-E5E8</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=puazb">PUA增补</a></td>
+      <td>207字</td>
+      <td>E600-E6CF</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=hzbh">汉字笔画</a></td>
+      <td>36字</td>
+      <td>31C0-31E3</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=hzjg">汉字结构</a></td>
+      <td>12字</td>
+      <td>2FF0-2FFB</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=hyzy">汉语注音</a></td>
+      <td>22字</td>
+      <td>3105-3120</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php?zfj=zykz">注音扩展</a></td>
+      <td>22字</td>
+      <td>31A0-31BA</td>
+    </tr>
+    <tr>
+      <td>〇</td>
+      <td>1字</td>
+      <td>3007</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="crontab">Crontab</h3>
+<p>Unicode 是全球文字统一编码。它把世界上的各种文字的每一个字符指定唯一编码，实现跨语种、跨平台的应用。</p>
 
-<pre><code class="language-bash"># Adding tasks easily
-echo "@reboot echo hi" | crontab
-</code></pre>
+<p>中文用户最常接触的是汉字 Unicode 编码。中文字符数量巨大，日常使用的汉字数量有数千个，再加上生僻字，数量达到数万个。这个表格将中文字符集的 Unicode 编码范围列出，点击字库条目可见具体字符。若要查询具体字符的编码请前往：<a href="http://www.qqxiuzi.cn/bianma/zifuji.php">汉字字符集编码查询</a>。</p>
 
-<pre><code class="language-bash"># Open in editor
-crontab -e
-</code></pre>
+<h3 id="英文和数字">英文和数字</h3>
 
-<pre><code class="language-bash"># List tasks
-crontab -l [-u user]
-</code></pre>
+<table>
+  <thead>
+    <tr>
+      <th>字符集</th>
+      <th>字数</th>
+      <th>Unicode 编码</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.zhangxinxu.com/study/201611/show-character-by-charcode.php?range=30-39">数字0-9</a></td>
+      <td>10字</td>
+      <td>30-39</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.zhangxinxu.com/study/201611/show-character-by-charcode.php?range=61-7a">小写英文字母</a></td>
+      <td>26字</td>
+      <td>61-7a</td>
+    </tr>
+    <tr>
+      <td><a href="http://www.zhangxinxu.com/study/201611/show-character-by-charcode.php?range=41-5a">大写英文字母</a></td>
+      <td>26字</td>
+      <td>41-5a</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+  <li><a href="http://www.qqxiuzi.cn/zh/hanzi-unicode-bianma.php">汉字Unicode编码范围</a></li>
+</ul>
 
   </main>
 </div>
@@ -319,14 +398,14 @@ crontab -l [-u user]
       <div class='group'>
         <div class='related-posts-group'>
           
-            <h3>Other Linux cheatsheets</h3>
+            <h3>Other cheatsheets</h3>
           
 
           <ul class='related-post-list'>
             
               <li class='item related-post-item'>
-  <a href='./vim'>
-    <strong>Vim</strong>
+  <a href='./bootstrap'>
+    <strong>Bootstrap</strong>
     <span>
       cheatsheet
 
@@ -339,8 +418,8 @@ crontab -l [-u user]
 
             
               <li class='item related-post-item'>
-  <a href='./bash'>
-    <strong>Bash scripting</strong>
+  <a href='./cheatsheet-styles'>
+    <strong>Cheatsheet styles</strong>
     <span>
       cheatsheet
 
@@ -353,8 +432,20 @@ crontab -l [-u user]
 
             
               <li class='item related-post-item'>
-  <a href='./curl'>
-    <strong>Curl</strong>
+  <a href='./'>
+    <strong></strong>
+    <span>
+      cheatsheet
+
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./licenses'>
+    <strong>Licenses</strong>
     <span>
       cheatsheet
 
@@ -367,13 +458,11 @@ crontab -l [-u user]
 
             
               <li class='item related-post-item'>
-  <a href='./sed'>
-    <strong>sed</strong>
+  <a href='./data/search-index.json'>
+    <strong></strong>
     <span>
       cheatsheet
 
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
       
     </span>
   </a>
@@ -381,13 +470,11 @@ crontab -l [-u user]
 
             
               <li class='item related-post-item'>
-  <a href='./zsh'>
-    <strong>zsh</strong>
+  <a href='./sitemap.xml'>
+    <strong></strong>
     <span>
       cheatsheet
 
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
       
     </span>
   </a>
@@ -461,8 +548,8 @@ crontab -l [-u user]
 
             
               <li class='item related-post-item'>
-  <a href='./html-meta'>
-    <strong>HTML meta tags</strong>
+  <a href='./cron'>
+    <strong>Cron</strong>
     <span>
       cheatsheet
 
@@ -949,7 +1036,7 @@ module.exports = on
 /******/ ]);</script>
 <script src='./assets/packed/vendor.js?t=20171119231233'></script>
 <script src='./assets/packed/app.js?t=20171119231233'></script>
-
+<script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-bash.min.js'></script>
 
 
 </body>
