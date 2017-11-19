@@ -1,0 +1,3227 @@
+<!doctype html>
+<html class='NoJs' lang='en'><head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='./assets/favicon.png' rel='shortcut icon'>
+<meta content='/' name='app:pageurl'>
+
+
+  <title>Jimmy Song - Cheatsheets for developers</title>
+  <meta content='Jimmy Song - Cheatsheets for developers' property='og:title'>
+  <meta content='Jimmy Song - Cheatsheets for developers' property='twitter:title'>
+  <meta content='website' property='og:type'>
+
+
+
+
+
+  <meta content="A ridiculous collection of web development cheatsheets · One-page guide to " name="description">
+  <meta content="A ridiculous collection of web development cheatsheets · One-page guide to " property="og:description">
+  <meta content="A ridiculous collection of web development cheatsheets · One-page guide to " property="twitter:description">
+
+
+<link rel="canonical" href="http://localhost:4001/">
+<meta name="og:url" content="http://localhost:4001/">
+
+  <link rel="prefetch" href="http://localhost:4001">
+  <link rel="prerender" href="http://localhost:4001">
+
+
+
+
+
+  <meta content='cheatsheets - jimmysong.io' property='og:site_name'>
+
+
+
+
+
+
+
+
+
+  <meta content='Others' property='article:section'>
+
+
+
+
+
+
+
+  <meta property='page:depth' content='-1'>
+
+
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+<script>(function(H){H.className=H.className.replace(/\bNoJs\b/,'WithJs')})(document.documentElement)</script>
+<!-- baidu analysis -->
+<meta name="baidu-site-verification" content="g8IYR9SNLF" />
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?11f7d254cfa4e0ca44b175c66d379ecc";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script>(function(d,s){if(window.Promise&&[].includes&&Object.assign&&window.Map)return;var js,sc=d.getElementsByTagName(s)[0];js=d.createElement(s);js.src='https://cdn.polyfill.io/v2/polyfill.min.js';sc.parentNode.insertBefore(js, sc);}(document,'script'))</script>
+
+<!--[if lt IE 9]><script src='//cdnjs.cloudflare.com/ajax/libs/nwmatcher/1.2.5/nwmatcher.min.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.js'></script><script src='//cdn.rawgit.com/gisu/selectivizr/1.0.3/selectivizr.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'></script><![endif]-->
+
+
+<!-- critical css -->
+<style id='critical-css'>*,::after,::before{background-repeat:no-repeat;box-sizing:inherit}::after,::before{text-decoration:inherit;vertical-align:inherit}html{box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}aside,nav{display:block}body{margin:0}h1{font-size:2em;margin:.67em 0}nav ul{list-style:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}code{font-family:monospace,monospace;font-size:1em}iframe{vertical-align:middle}button,input{margin:0}button,input{background-color:transparent;color:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring{outline:1px dotted ButtonText}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}a,button,input,label{-ms-touch-action:manipulation;touch-action:manipulation}body,html{background:#f1f3f5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;font-size:14px;line-height:1.6;color:#345;overflow-x:hidden}body{font-size:13px;padding:0;margin:0}@media (min-width:480px) and (max-width:768px){body{font-size:calc(13px + 1 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){body{font-size:calc(14px + 0 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){body{font-size:14px}}code{font-family:cousine,SFMono-Regular,Consolas,Menlo,"Liberation Mono","Ubuntu Mono",Courier,monospace;letter-spacing:-.03em}:not(pre):not(code){-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}a{color:#26648e}a:visited{color:#15234d}@media (max-width:580px){.hint--bottom::after,.hint--bottom::before{display:none}}html.WithJs .post-content{opacity:0}html.WithJs .code-sponsor{transform:scale(.7);opacity:0}html.WithJs.LoadDone .code-sponsor{transform:scale(1);opacity:1}html.WithJs .intro-content,html.WithJs .pages-list,html.WithJs .post-content.-wrapified{opacity:.4}html.WithJs.LoadDone .intro-content,html.WithJs.LoadDone .pages-list,html.WithJs.LoadDone .post-content.-wrapified{opacity:1}.attribute-peg{display:inline-block;height:12px;width:20px;text-align:center}.attribute-peg>span{display:inline-block;width:8px;height:8px;background:#77dab2;border-radius:50%}.announcements-item{position:relative;padding:16px;box-shadow:0 6px 8px rgba(102,119,136,.03),0 1px 2px rgba(102,119,136,.3),0 8px 12px rgba(58,193,203,.1);border-radius:1px;background:#fff;padding-right:48px;animation:announcements-item-flyin .5s ease-out}.announcements-item.-hide{display:none}.announcements-item>.title{font-size:15px;font-weight:400;color:#745fb5;margin:0;padding:0}@media (min-width:480px) and (max-width:768px){.announcements-item>.title{font-size:calc(15px + 1 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){.announcements-item>.title{font-size:calc(16px + 0 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){.announcements-item>.title{font-size:16px}}.announcements-item>.close{position:absolute;right:0;top:0;width:40px;height:40px;line-height:40px;text-align:center;border:0;margin:0;padding:0}.announcements-item>.close::before{content:"\00D7";font-size:14px}@keyframes announcements-item-flyin{0%{transform:translate3d(0,32px,0);opacity:0}100%{transform:translate3d(0,0,0);opacity:1}}.announcements-list{position:fixed;left:0;bottom:0;max-width:420px;padding:0;z-index:10}@media (min-width:481px){.announcements-list{padding:16px}}@media (min-width:769px){.announcements-list{padding:32px}}.back-button{text-decoration:none;width:48px;height:48px;line-height:46px;text-align:center;display:inline-block;border-radius:50%}@media (max-width:480px){.back-button{width:32px;height:32px;line-height:30px}}.back-button,.back-button:visited{color:#678}.back-button::before{content:'';display:inline-block;vertical-align:middle;background:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22rgb(51%2C68%2C85)%22%20d%3D%22M427%20234.625H167.296l119.702-119.702L256%2085%2085%20256l171%20171%2029.922-29.924-118.626-119.7H427v-42.75z%22%2F%3E%3C%2Fsvg%3E") center center/24px 24px no-repeat;height:24px;width:24px;vertical-align:middle}@media (max-width:480px){.back-button::before{font-size:16px}}.body-area{max-width:1232px;margin:0 auto;padding:16px}@media (max-width:480px){.body-area{padding:16px}}.body-area.-slim{max-width:740px}.code-sponsor{text-align:center;position:relative;height:130px;overflow:hidden}.code-sponsor>div{position:relative;z-index:1;margin-top:-16px}.code-sponsor>div>iframe{display:inline-block;opacity:.9}.page-actions{margin:0;padding:0}.page-actions{height:32px}.page-actions>.link.link>a{display:inline-block;height:32px;line-height:32px;vertical-align:top;width:auto}.page-actions>li{margin:0;padding:0;list-style-type:none}.page-actions>li>a,.page-actions>li>a:visited{color:#678;text-decoration:none}.page-actions>li>a>.text{font-size:11px;display:none}@media (min-width:480px) and (max-width:768px){.page-actions>li>a>.text{font-size:calc(11px + 1 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){.page-actions>li>a>.text{font-size:calc(12px + 0 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){.page-actions>li>a>.text{font-size:12px}}.page-actions>.facebook>a::before,.page-actions>.twitter>a::before{content:'';vertical-align:middle}.page-actions>.facebook>a::before{display:inline-block;vertical-align:middle;background:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22rgb(51%2C68%2C85)%22%20d%3D%22M426.8%2064H85.2C73.5%2064%2064%2073.5%2064%2085.2v341.6c0%2011.7%209.5%2021.2%2021.2%2021.2H256V296h-45.9v-56H256v-41.4c0-49.6%2034.4-76.6%2078.7-76.6%2021.2%200%2044%201.6%2049.3%202.3v51.8h-35.3c-24.1%200-28.7%2011.4-28.7%2028.2V240h57.4l-7.5%2056H320v152h106.8c11.7%200%2021.2-9.5%2021.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z%22%2F%3E%3C%2Fsvg%3E") center center/16px 16px no-repeat;height:16px;width:16px}.page-actions>.twitter>a::before{display:inline-block;vertical-align:middle;background:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22rgb(51%2C68%2C85)%22%20d%3D%22M492%20109.5c-17.4%207.7-36%2012.9-55.6%2015.3%2020-12%2035.4-31%2042.6-53.6-18.7%2011.1-39.4%2019.2-61.5%2023.5C399.8%2075.8%20374.6%2064%20346.8%2064c-53.5%200-96.8%2043.4-96.8%2096.9%200%207.6.8%2015%202.5%2022.1-80.5-4-151.9-42.6-199.6-101.3-8.3%2014.3-13.1%2031-13.1%2048.7%200%2033.6%2017.2%2063.3%2043.2%2080.7-16-.4-31-4.8-44-12.1v1.2c0%2047%2033.4%2086.1%2077.7%2095-8.1%202.2-16.7%203.4-25.5%203.4-6.2%200-12.3-.6-18.2-1.8%2012.3%2038.5%2048.1%2066.5%2090.5%2067.3-33.1%2026-74.9%2041.5-120.3%2041.5-7.8%200-15.5-.5-23.1-1.4C62.8%20432%20113.7%20448%20168.3%20448%20346.6%20448%20444%20300.3%20444%20172.2c0-4.2-.1-8.4-.3-12.5C462.6%20146%20479%20129%20492%20109.5z%22%2F%3E%3C%2Fsvg%3E") center center/16px 16px no-repeat;height:16px;width:16px}.page-actions>.facebook>a::before,.page-actions>.twitter>a::before{width:32px;height:32px}@media (max-width:768px){.page-actions>.link{margin-left:16px}}.page-actions>.link:first-child>a{margin-left:0}.page-actions>.link:last-child>a{margin-right:0}.pages-list{display:flex;flex-wrap:wrap}.pages-list>.item{flex:0 0 100%}.pages-list>.item.article{flex:0 0 50%}@media (min-width:581px){.pages-list>.item.top-sheet{flex:0 0 25%}}.pages-list>.article{text-decoration:none;display:block;white-space:nowrap;padding:4px 0}.pages-list>.article,.pages-list>.article:visited{color:#92a0ad}.pages-list>.article>.info>.slug{color:#111}.pages-list>.article:visited>.info>.slug{color:#345}.pages-list>.article>.info>.title::before{content:'';margin:0 4px}.pages-list>.article>.info>.title{opacity:0}@media (max-width:768px){.pages-list>.article>.info>.title{display:none}}.pages-list>.category{font-size:15px;border-bottom:solid 1px rgba(102,119,136,.2);margin:16px 0;padding:0 0 16px 0;font-weight:400;color:#745fb5}@media (min-width:480px) and (max-width:768px){.pages-list>.category{font-size:calc(15px + 1 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){.pages-list>.category{font-size:calc(16px + 0 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){.pages-list>.category{font-size:16px}}.search-box{background:#fff;box-shadow:0 6px 8px rgba(102,119,136,.03),0 1px 2px rgba(102,119,136,.3);display:flex;height:64px;align-items:center}.search-box>input{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;font-size:17px;padding:16px;height:64px;background:0 0;border:0;flex:1 1 auto;padding-left:0;font-weight:700;color:#111;min-width:48px}@media (min-width:480px) and (max-width:768px){.search-box>input{font-size:calc(17px + 2 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){.search-box>input{font-size:calc(19px + 0 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){.search-box>input{font-size:19px}}.search-box>input::placeholder{font-weight:400;color:#678}.search-box>input:focus{outline:0}.search-box>.prefix{font-size:13px;display:block;color:rgba(102,119,136,.5);font-weight:400;line-height:1.5em;padding:2px 8px;border-radius:3px;background:rgba(241,243,245,.5);margin:0 0 0 16px;box-shadow:0 1px 1px rgba(102,119,136,.25)}@media (min-width:480px) and (max-width:768px){.search-box>.prefix{font-size:calc(13px + 1 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){.search-box>.prefix{font-size:calc(14px + 0 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){.search-box>.prefix{font-size:14px}}.search-box>.sep{color:rgba(102,119,136,.5);font-size:17px;margin:0 8px}@media (min-width:480px) and (max-width:768px){.search-box>.sep{font-size:calc(17px + 2 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){.search-box>.sep{font-size:calc(19px + 0 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){.search-box>.sep{font-size:19px}}@media (max-width:768px){.search-box>.prefix,.search-box>.sep{display:none}.search-box>input{padding-left:16px}}.search-box::before{content:'';display:inline-block;vertical-align:middle;background:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22rgb(17%2C17%2C17)%22%20d%3D%22M337.51%20305.372h-17.502l-6.57-5.486c20.79-25.232%2033.92-57.054%2033.92-93.257C347.36%20127.63%20283.897%2064%20205.136%2064%20127.452%2064%2064%20127.632%2064%20206.63s63.452%20142.627%20142.225%20142.627c35.01%200%2067.83-13.167%2092.99-34.008l6.562%205.486v17.55L415.18%20448%20448%20415.086%20337.51%20305.372zm-131.285%200c-54.702%200-98.463-43.887-98.463-98.743%200-54.86%2043.76-98.743%2098.463-98.743%2054.7%200%2098.462%2043.884%2098.462%2098.742%200%2054.855-43.762%2098.742-98.462%2098.742z%22%2F%3E%3C%2Fsvg%3E") center center/32px 32px no-repeat;height:32px;width:32px;background-position:center center;flex:0 0 64px;width:64px;order:2}.search-box.-small{height:48px}.search-box.-small>input{padding:8px;height:48px;padding-left:0}.search-box.-small>.prefix,.search-box.-small>.sep,.search-box.-small>input{font-size:15px}@media (min-width:480px) and (max-width:768px){.search-box.-small>.prefix,.search-box.-small>.sep,.search-box.-small>input{font-size:calc(15px + 1 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){.search-box.-small>.prefix,.search-box.-small>.sep,.search-box.-small>input{font-size:calc(16px + 0 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){.search-box.-small>.prefix,.search-box.-small>.sep,.search-box.-small>input{font-size:16px}}.search-box.-small::before{flex:0 0 48px;width:48px;line-height:48px;background-size:24px 24px;background-position:center center}.site-header{margin:32px 0}.site-header>p{margin:0;padding:0;text-align:center;color:#678}.site-header>p>a{text-decoration:none}.site-header>h1{font-size:40px;line-height:1.2;margin:0;padding:0;color:#111;font-weight:200;text-align:center;margin-bottom:16px}@media (min-width:480px) and (max-width:768px){.site-header>h1{font-size:calc(40px + 6 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){.site-header>h1{font-size:calc(46px + 3 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){.site-header>h1{font-size:49px}}.site-header>.search{margin-top:32px}.site-header>.adbox{margin-top:32px;margin-bottom:-16px}@media (max-width:480px){.site-header>.adbox{margin-left:-16px;margin-right:-16px}}.top-nav,.top-nav>.container{height:64px;line-height:64px;text-align:center;position:relative}@media (max-width:480px){.top-nav>.container{height:32px;line-height:32px;margin-top:8px}.top-nav{height:48px;padding:8px 0;border-bottom:solid 1px rgba(102,119,136,.2);margin-bottom:8px}}.top-nav>.container{padding-left:16px;padding-right:16px;max-width:1232px;margin:0 auto}@media (max-width:480px){.top-nav>.container{padding-left:16px}}@media (max-width:480px){.top-nav>.container{padding-right:16px}}.top-nav>.container{display:flex;align-items:center;position:relative}.top-nav>.container>.left{flex:0 0 auto;line-height:32px}.top-nav>.container>.brand{flex:1 1 auto}.top-nav>.container>.actions{flex:0 0 auto;display:flex}.top-nav>.container>.brand{font-size:11px;display:inline-block;font-weight:700;text-transform:uppercase;letter-spacing:.05em;text-decoration:none}@media (min-width:480px) and (max-width:768px){.top-nav>.container>.brand{font-size:calc(11px + 1 * ((100vw - 480px)/ 288))}}@media (min-width:768px) and (max-width:1280px){.top-nav>.container>.brand{font-size:calc(12px + 0 * ((100vw - 768px)/ 512))}}@media (min-width:1280px){.top-nav>.container>.brand{font-size:12px}}.top-nav>.container>.brand,.top-nav>.container>.brand:visited{color:#345}@media (max-width:480px){.top-nav>.container>.brand{display:none}.top-nav>.container>.actions{margin-left:auto}}@media (min-width:481px){.top-nav>.container>.actions{position:absolute;right:16px;top:16px}}@media (min-width:481px) and (max-width:480px){.top-nav>.container>.actions{right:16px}}@media (min-width:481px){.top-nav>.container>.left{position:absolute;left:16px;top:16px}}@media (min-width:481px) and (max-width:480px){.top-nav>.container>.left{left:16px}}@media (min-width:1232px){.top-nav>.container>.left>.home{position:relative;left:-16px}}.top-sheet.top-sheet{padding:4px;text-decoration:none}.top-sheet.top-sheet>.info{display:block;background:#745fb5;color:#fff;text-align:left;padding:16px;width:auto;border-radius:3px;box-shadow:0 1px 1px rgba(102,119,136,.55);text-shadow:0 1px 1px rgba(51,68,85,.3);white-space:nowrap}.top-sheet.top-sheet:nth-of-type(3n+1)>.info{background:linear-gradient(15deg,#745fb5,#9a6dbb)}.top-sheet.top-sheet>.info>.title{display:none}</style>
+
+<!-- allow disabling critical CSS optimization by passing ?nocrit=1 -->
+<script id='critical-css-disable'>if (~window.location.search.indexOf('nocrit')){;[].slice.call(document.querySelectorAll('#critical-css')).map(function(e){e.parentNode.removeChild(e)})}</script>
+
+<!-- deferred css -->
+<script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
+'https://fonts.googleapis.com/css?family=Cousine',
+'./assets/2017/style.css?t=20171119174742'
+])</script>
+<noscript id='deferred-css-fallback'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20171119174742'>
+</noscript>
+
+
+</head><body>
+
+
+<nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+    
+      <div class='left'>
+        <a class='home back-button' href='.'></a>
+      </div>
+    
+
+    <a class='brand' href='.'>
+      Cheatsheets - jimmysong.io
+    </a>
+
+    
+      <div class='actions'>
+        
+<ul class="social-list social page-actions">
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4001/" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=Ridiculous%20collection%20of%20web%20development%20cheatsheets%20http://localhost:4001/" target="share"><span class="text"></span></a></li>
+  
+</ul>
+
+
+        
+      </div>
+    
+  </div>
+</nav>
+
+
+
+
+<div class='body-area -slim'>
+  <div class='site-header' role='banner'>
+    <h1>
+      Jimmy's cheatsheets
+    </h1>
+    <p>
+      Hey! I'm <a href='https://jimmysong.io'>@jimmysongio</a> and this is a modest collection of cheatsheets I've written.
+
+    </p>
+
+    <form
+  data-js-search-form
+  class='search' action='.' method='get'>
+  <label class='search-box '>
+    <span class='prefix'>cheatsheets</span>
+    <span class='sep'>/</span>
+    <input name='q'
+      type='text'
+      
+        
+        autofocus data-js-search-input
+        placeholder='Search...'
+      >
+  </label>
+</form>
+
+
+  </div>
+
+  <div class='pages-list' role='main'>
+    
+      
+<a class='item top-sheet -item-bash'
+  href="./bash"
+  data-js-searchable-item='{"slug":"bash","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>bash</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Bash scripting </span>
+  </span>
+</a>
+
+    
+      
+<a class='item top-sheet -item-go'
+  href="./go"
+  data-js-searchable-item='{"slug":"go","category":"Go"}'>
+  <span class='info'>
+    <code class='slug'>go</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Go </span>
+  </span>
+</a>
+
+    
+      
+<a class='item top-sheet -item-kubernetes-kubectl'
+  href="./kubernetes-kubectl"
+  data-js-searchable-item='{"slug":"kubernetes-kubectl","category":"Kubernetes"}'>
+  <span class='info'>
+    <code class='slug'>kubernetes-kubectl</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>kubectl </span>
+  </span>
+</a>
+
+    
+      
+<a class='item top-sheet -item-kubernetes-tricks'
+  href="./kubernetes-tricks"
+  data-js-searchable-item='{"slug":"kubernetes-tricks","category":"Kubernetes"}'>
+  <span class='info'>
+    <code class='slug'>kubernetes-tricks</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Kubernetes tricks </span>
+  </span>
+</a>
+
+    
+      
+<a class='item top-sheet -item-react'
+  href="./react"
+  data-js-searchable-item='{"slug":"react","category":"React"}'>
+  <span class='info'>
+    <code class='slug'>react</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>React.js </span>
+  </span>
+</a>
+
+    
+      
+<a class='item top-sheet -item-vim'
+  href="./vim"
+  data-js-searchable-item='{"slug":"vim","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>vim</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Vim </span>
+  </span>
+</a>
+
+    
+      
+<a class='item top-sheet -item-xpath'
+  href="./xpath"
+  data-js-searchable-item='{"slug":"xpath","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>xpath</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Xpath </span>
+  </span>
+</a>
+
+    
+
+    <h2 class='category item' data-js-searchable-header>
+      <span>Recently updated</span>
+    </h2>
+
+    
+      
+        
+<a class='article item -item-kubernetes-kubectl'
+  href="./kubernetes-kubectl"
+  data-js-searchable-item='{"slug":"kubernetes-kubectl","category":"Kubernetes"}'>
+  <span class='info'>
+    <code class='slug'>kubernetes-kubectl</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>kubectl </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-kubernetes-tricks'
+  href="./kubernetes-tricks"
+  data-js-searchable-item='{"slug":"kubernetes-tricks","category":"Kubernetes"}'>
+  <span class='info'>
+    <code class='slug'>kubernetes-tricks</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Kubernetes tricks </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-html-input'
+  href="./html-input"
+  data-js-searchable-item='{"slug":"html-input","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>html-input</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Input tag </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-git-log-format'
+  href="./git-log-format"
+  data-js-searchable-item='{"slug":"git-log-format","category":"Git"}'>
+  <span class='info'>
+    <code class='slug'>git-log-format</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Git log format string </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-git-revisions'
+  href="./git-revisions"
+  data-js-searchable-item='{"slug":"git-revisions","category":"Git"}'>
+  <span class='info'>
+    <code class='slug'>git-revisions</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Git revisions </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-react'
+  href="./react"
+  data-js-searchable-item='{"slug":"react","category":"React"}'>
+  <span class='info'>
+    <code class='slug'>react</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>React.js </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-webpack'
+  href="./webpack"
+  data-js-searchable-item='{"slug":"webpack","category":"JavaScript libraries"}'>
+  <span class='info'>
+    <code class='slug'>webpack</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Webpack </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-cheatsheet-styles'
+  href="./cheatsheet-styles"
+  data-js-searchable-item='{"slug":"cheatsheet-styles","category":"Others"}'>
+  <span class='info'>
+    <code class='slug'>cheatsheet-styles</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Cheatsheet styles </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-docker-compose'
+  href="./docker-compose"
+  data-js-searchable-item='{"slug":"docker-compose","category":"Docker"}'>
+  <span class='info'>
+    <code class='slug'>docker-compose</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>docker-compose </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-curl'
+  href="./curl"
+  data-js-searchable-item='{"slug":"curl","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>curl</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Curl </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-markdown'
+  href="./markdown"
+  data-js-searchable-item='{"slug":"markdown","category":"Markup"}'>
+  <span class='info'>
+    <code class='slug'>markdown</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Markdown </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-git-branch'
+  href="./git-branch"
+  data-js-searchable-item='{"slug":"git-branch","category":"Git"}'>
+  <span class='info'>
+    <code class='slug'>git-branch</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Git branches </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-go'
+  href="./go"
+  data-js-searchable-item='{"slug":"go","category":"Go"}'>
+  <span class='info'>
+    <code class='slug'>go</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Go </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-html-share'
+  href="./html-share"
+  data-js-searchable-item='{"slug":"html-share","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>html-share</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Share links </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-jekyll'
+  href="./jekyll"
+  data-js-searchable-item='{"slug":"jekyll","category":"Jekyll"}'>
+  <span class='info'>
+    <code class='slug'>jekyll</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Jekyll </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-html-email'
+  href="./html-email"
+  data-js-searchable-item='{"slug":"html-email","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>html-email</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>HTML emails </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-vim'
+  href="./vim"
+  data-js-searchable-item='{"slug":"vim","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>vim</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Vim </span>
+  </span>
+</a>
+
+      
+    
+      
+        
+<a class='article item -item-fitness/phat'
+  href="./fitness/phat"
+  data-js-searchable-item='{"slug":"fitness/phat","category":"Fitness"}'>
+  <span class='info'>
+    <code class='slug'>fitness/phat</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Phat </span>
+  </span>
+</a>
+
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+
+    
+      <h2 class='category item' id='bigdata' data-js-searchable-header>
+        <span>BigData</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='devops' data-js-searchable-header>
+        <span>Devops</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='docker' data-js-searchable-header>
+        <span>Docker</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-docker-compose'
+  href="./docker-compose"
+  data-js-searchable-item='{"slug":"docker-compose","category":"Docker"}'>
+  <span class='info'>
+    <code class='slug'>docker-compose</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>docker-compose </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-docker'
+  href="./docker"
+  data-js-searchable-item='{"slug":"docker","category":"Docker"}'>
+  <span class='info'>
+    <code class='slug'>docker</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Docker CLI </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-dockerfile'
+  href="./dockerfile"
+  data-js-searchable-item='{"slug":"dockerfile","category":"Docker"}'>
+  <span class='info'>
+    <code class='slug'>dockerfile</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Dockerfile </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='git' data-js-searchable-header>
+        <span>Git</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-git-branch'
+  href="./git-branch"
+  data-js-searchable-item='{"slug":"git-branch","category":"Git"}'>
+  <span class='info'>
+    <code class='slug'>git-branch</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Git branches </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-git-extras'
+  href="./git-extras"
+  data-js-searchable-item='{"slug":"git-extras","category":"Git"}'>
+  <span class='info'>
+    <code class='slug'>git-extras</code>
+
+    
+
+    <span class='title'>Git extras </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-git-log-format'
+  href="./git-log-format"
+  data-js-searchable-item='{"slug":"git-log-format","category":"Git"}'>
+  <span class='info'>
+    <code class='slug'>git-log-format</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Git log format string </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-git-log'
+  href="./git-log"
+  data-js-searchable-item='{"slug":"git-log","category":"Git"}'>
+  <span class='info'>
+    <code class='slug'>git-log</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>git log </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-git-revisions'
+  href="./git-revisions"
+  data-js-searchable-item='{"slug":"git-revisions","category":"Git"}'>
+  <span class='info'>
+    <code class='slug'>git-revisions</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Git revisions </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-git-tricks'
+  href="./git-tricks"
+  data-js-searchable-item='{"slug":"git-tricks","category":"Git"}'>
+  <span class='info'>
+    <code class='slug'>git-tricks</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Git tricks </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='go' data-js-searchable-header>
+        <span>Go</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-go'
+  href="./go"
+  data-js-searchable-item='{"slug":"go","category":"Go"}'>
+  <span class='info'>
+    <code class='slug'>go</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Go </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='hugo' data-js-searchable-header>
+        <span>Hugo</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='html' data-js-searchable-header>
+        <span>HTML</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-html-email'
+  href="./html-email"
+  data-js-searchable-item='{"slug":"html-email","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>html-email</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>HTML emails </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-html-input'
+  href="./html-input"
+  data-js-searchable-item='{"slug":"html-input","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>html-input</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Input tag </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-html-meta'
+  href="./html-meta"
+  data-js-searchable-item='{"slug":"html-meta","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>html-meta</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>HTML meta tags </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-html-microformats'
+  href="./html-microformats"
+  data-js-searchable-item='{"slug":"html-microformats","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>html-microformats</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Microformats </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-html-share'
+  href="./html-share"
+  data-js-searchable-item='{"slug":"html-share","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>html-share</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Share links </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-html'
+  href="./html"
+  data-js-searchable-item='{"slug":"html","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>html</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>HTML </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-xpath'
+  href="./xpath"
+  data-js-searchable-item='{"slug":"xpath","category":"HTML"}'>
+  <span class='info'>
+    <code class='slug'>xpath</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Xpath </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='javascript' data-js-searchable-header>
+        <span>JavaScript</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='jekyll' data-js-searchable-header>
+        <span>Jekyll</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-gh-pages'
+  href="./gh-pages"
+  data-js-searchable-item='{"slug":"gh-pages","category":"Jekyll"}'>
+  <span class='info'>
+    <code class='slug'>gh-pages</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>GitHub pages </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-jekyll-github'
+  href="./jekyll-github"
+  data-js-searchable-item='{"slug":"jekyll-github","category":"Jekyll"}'>
+  <span class='info'>
+    <code class='slug'>jekyll-github</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Jekyll for GitHub pages </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-jekyll'
+  href="./jekyll"
+  data-js-searchable-item='{"slug":"jekyll","category":"Jekyll"}'>
+  <span class='info'>
+    <code class='slug'>jekyll</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Jekyll </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='kubernetes' data-js-searchable-header>
+        <span>Kubernetes</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-kubernetes-kubectl'
+  href="./kubernetes-kubectl"
+  data-js-searchable-item='{"slug":"kubernetes-kubectl","category":"Kubernetes"}'>
+  <span class='info'>
+    <code class='slug'>kubernetes-kubectl</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>kubectl </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-kubernetes-tricks'
+  href="./kubernetes-tricks"
+  data-js-searchable-item='{"slug":"kubernetes-tricks","category":"Kubernetes"}'>
+  <span class='info'>
+    <code class='slug'>kubernetes-tricks</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Kubernetes tricks </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='linux' data-js-searchable-header>
+        <span>Linux</span>
+      </h2>
+
+      
+        
+      
+        
+          
+            
+<a class='article item -item-bash'
+  href="./bash"
+  data-js-searchable-item='{"slug":"bash","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>bash</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Bash scripting </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-cron'
+  href="./cron"
+  data-js-searchable-item='{"slug":"cron","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>cron</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Cron </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+          
+            
+<a class='article item -item-curl'
+  href="./curl"
+  data-js-searchable-item='{"slug":"curl","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>curl</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Curl </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-sed'
+  href="./sed"
+  data-js-searchable-item='{"slug":"sed","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>sed</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>sed </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-vim'
+  href="./vim"
+  data-js-searchable-item='{"slug":"vim","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>vim</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Vim </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-zsh'
+  href="./zsh"
+  data-js-searchable-item='{"slug":"zsh","category":"Linux"}'>
+  <span class='info'>
+    <code class='slug'>zsh</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>zsh </span>
+  </span>
+</a>
+
+          
+        
+      
+    
+      <h2 class='category item' id='python' data-js-searchable-header>
+        <span>Python</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-python'
+  href="./python"
+  data-js-searchable-item='{"slug":"python","category":"Python"}'>
+  <span class='info'>
+    <code class='slug'>python</code>
+
+    
+
+    <span class='title'>Python </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='react' data-js-searchable-header>
+        <span>React</span>
+      </h2>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-react'
+  href="./react"
+  data-js-searchable-item='{"slug":"react","category":"React"}'>
+  <span class='info'>
+    <code class='slug'>react</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>React.js </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      <h2 class='category item' id='others' data-js-searchable-header>
+        <span>Others</span>
+      </h2>
+
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-bootstrap'
+  href="./bootstrap"
+  data-js-searchable-item='{"slug":"bootstrap","category":"Others"}'>
+  <span class='info'>
+    <code class='slug'>bootstrap</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Bootstrap </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-cheatsheet-styles'
+  href="./cheatsheet-styles"
+  data-js-searchable-item='{"slug":"cheatsheet-styles","category":"Others"}'>
+  <span class='info'>
+    <code class='slug'>cheatsheet-styles</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Cheatsheet styles </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+<a class='article item -item-licenses'
+  href="./licenses"
+  data-js-searchable-item='{"slug":"licenses","category":"Others"}'>
+  <span class='info'>
+    <code class='slug'>licenses</code>
+
+    
+    <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+    
+
+    <span class='title'>Licenses </span>
+  </span>
+</a>
+
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <div class='message item missing-message'>
+      <h3>See something missing?</h3>
+      <p>
+        <a class='push-button' href='http://github.com/rootsongjc/cheatsheets/issues/new?title=Cheatsheet%20request:%20APP_NAME_HERE'>Request cheatsheet</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class='announcements-list'>
+  <div class='announcements-item item -hide' data-js-dismissable='{"id":"2017-10-26-twitter"}'>
+    <h3 class='title'>New: I'm on Twitter ♥️
+</h3>
+    <div class='body'><p>Follow <a href="https://twitter.com/jimmysongio">@jimmysongio</a> on Twitter for daily “today I learned” snippets!</p>
+
+<p><a href="https://twitter.com/jimmysongio"><img src="https://img.shields.io/twitter/follow/jimmysongio.svg?style=social&amp;label=@jimmysongio" alt="" /></a></p>
+</div>
+    <button data-js-dismiss class='close'></button>
+  </div>
+</div>
+
+
+
+
+<!-- critical js -->
+<script>/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+/**
+ * matches : matches(el, selector)
+ * Checks if a given element `el` matches `selector`.
+ * Compare with [$.fn.is](http://api.jquery.com/is/).
+ *
+ *     var matches = require('dom101/matches');
+ *
+ *     matches(button, ':focus');
+ */
+
+function matches (el, selector) {
+  var _matches = el.matches ||
+    el.matchesSelector ||
+    el.msMatchesSelector ||
+    el.mozMatchesSelector ||
+    el.webkitMatchesSelector ||
+    el.oMatchesSelector
+
+  if (_matches) {
+    return _matches.call(el, selector)
+  } else if (el.parentNode) {
+    // IE8 and below
+    var nodes = el.parentNode.querySelectorAll(selector)
+    for (var i = nodes.length; i--; 0) {
+      if (nodes[i] === el) return true
+    }
+    return false
+  }
+}
+
+module.exports = matches
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var each = __webpack_require__(4)
+
+/**
+ * addClass : addClass(el, className)
+ * Adds a class name to an element. Compare with `$.fn.addClass`.
+ *
+ *     var addClass = require('dom101/add-class');
+ *
+ *     addClass(el, 'active');
+ */
+
+function addClass (el, className) {
+  if (!className) return
+
+  if (Array.isArray(className)) {
+    each(className, function (className) {
+      addClass(el, className)
+    })
+
+    return
+  }
+
+  if (el.classList) {
+    var classNames = className.split(' ').filter(Boolean)
+    each(classNames, function (className) {
+      el.classList.add(className)
+    })
+  } else {
+    el.className += ' ' + className
+  }
+}
+
+module.exports = addClass
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapify__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dom101_add_class__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dom101_add_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_dom101_add_class__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_dom101_on__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_dom101_on___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_dom101_on__);
+/*
+ * This is the "critical path" JavaScript that will be included INLINE on every
+ * page. Keep this as small as possible!
+ */
+
+
+
+
+
+// Transform the main body markup to make it readable.
+const body = document.querySelector('[data-js-main-body]');
+
+if (body) {
+  Object(__WEBPACK_IMPORTED_MODULE_0__wrapify__["a" /* default */])(body);
+  __WEBPACK_IMPORTED_MODULE_1_dom101_add_class___default()(body, '-wrapified');
+}
+
+// Be "done" when we're done, or after a certain timeout.
+__WEBPACK_IMPORTED_MODULE_2_dom101_on___default()(window, 'load', done);
+setTimeout(done, 5000);
+
+let isDone;
+function done() {
+  if (isDone) return;
+  __WEBPACK_IMPORTED_MODULE_1_dom101_add_class___default()(document.documentElement, 'LoadDone');
+  isDone = true;
+}
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = wrapify;
+/* unused harmony export groupify */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom101_matches__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom101_matches___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_dom101_matches__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dom101_add_class__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dom101_add_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_dom101_add_class__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helpers_dom__ = __webpack_require__(5);
+
+
+
+
+/**
+ * Wraps h2 sections into h2-section.
+ * Wraps h3 sections into h3-section.
+ *
+ * @private
+ */
+
+function wrapify(root) {
+  // These are your H2 sections. Returns a list of .h2-section nodes.
+  const sections = wrapifyH2(root);
+
+  // For each h2 section, wrap the H3's in them
+  sections.forEach(section => {
+    const bodies = Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["d" /* findChildren */])(section, '[data-js-h3-section-list]');
+    bodies.forEach(body => {
+      wrapifyH3(body);
+    });
+  });
+}
+
+/**
+ * Wraps h2 sections into h2-section.
+ * Creates and HTML structure like so:
+ *
+ *     .h2-section
+ *       h2.
+ *         (title)
+ *       .body.h3-section-list.
+ *         (body goes here)
+ *
+ * @private
+ */
+
+function wrapifyH2(root) {
+  return groupify(root, {
+    tag: 'h2',
+    wrapperFn: () => Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["c" /* createDiv */])({ class: 'h2-section' }),
+    bodyFn: () => Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["c" /* createDiv */])({
+      class: 'body h3-section-list',
+      'data-js-h3-section-list': ''
+    })
+  });
+}
+
+/**
+ * Wraps h3 sections into h3-section.
+ * Creates and HTML structure like so:
+ *
+ *     .h3-section
+ *       h3.
+ *         (title)
+ *       .body.
+ *         (body goes here)
+ *
+ * @private
+ */
+
+function wrapifyH3(root) {
+  return groupify(root, {
+    tag: 'h3',
+    wrapperFn: () => Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["c" /* createDiv */])({ class: 'h3-section' }),
+    bodyFn: () => Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["c" /* createDiv */])({ class: 'body' })
+  });
+}
+
+/**
+ * Groups all headings (a `tag` selector) under wrappers like `.h2-section`
+ * (build by `wrapperFn()`).
+ * @private
+ */
+
+function groupify(el, { tag, wrapperFn, bodyFn }) {
+  const first = el.children[0];
+  let result = [];
+
+  // Handle the markup before the first h2
+  if (first && !__WEBPACK_IMPORTED_MODULE_0_dom101_matches___default()(first, tag)) {
+    const sibs = Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["e" /* nextUntil */])(first, tag);
+    result.push(wrap(first, null, [first, ...sibs]));
+  }
+
+  // Find all h3's inside it
+  const children = Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["d" /* findChildren */])(el, tag);
+
+  children.forEach(child => {
+    const sibs = Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["e" /* nextUntil */])(child, tag);
+    result.push(wrap(child, child, sibs));
+  });
+
+  return result;
+
+  function wrap(pivot, first, sibs) {
+    const wrap = wrapperFn();
+
+    const pivotClass = pivot.className;
+    if (pivotClass) __WEBPACK_IMPORTED_MODULE_1_dom101_add_class___default()(wrap, pivotClass);
+    Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["b" /* before */])(pivot, wrap);
+
+    const body = bodyFn();
+    if (pivotClass) __WEBPACK_IMPORTED_MODULE_1_dom101_add_class___default()(body, pivotClass);
+    Object(__WEBPACK_IMPORTED_MODULE_2__helpers_dom__["a" /* appendMany */])(body, sibs);
+
+    if (first) wrap.appendChild(first);
+    wrap.appendChild(body);
+
+    return wrap;
+  }
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+/**
+ * each : each(list, fn)
+ * Iterates through `list` (an array or an object). This is useful when dealing
+ * with NodeLists like `document.querySelectorAll`.
+ *
+ *     var each = require('dom101/each');
+ *     var qa = require('dom101/query-selector-all');
+ *
+ *     each(qa('.button'), function (el) {
+ *       addClass('el', 'selected');
+ *     });
+ */
+
+function each (list, fn) {
+  var i
+  var len = list.length
+  var idx
+
+  if (typeof len === 'number') {
+    for (i = 0; i < len; i++) {
+      fn(list[i], i)
+    }
+  } else {
+    idx = 0
+    for (i in list) {
+      if (list.hasOwnProperty(i)) {
+        fn(list[i], i, idx++)
+      }
+    }
+  }
+
+  return list
+}
+
+module.exports = each
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = appendMany;
+/* harmony export (immutable) */ __webpack_exports__["e"] = nextUntil;
+/* harmony export (immutable) */ __webpack_exports__["b"] = before;
+/* harmony export (immutable) */ __webpack_exports__["d"] = findChildren;
+/* harmony export (immutable) */ __webpack_exports__["c"] = createDiv;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom101_matches__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom101_matches___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_dom101_matches__);
+
+
+/*
+ * Just like jQuery.append
+ */
+
+function appendMany(el, children) {
+  children.forEach(child => {
+    el.appendChild(child);
+  });
+}
+
+/*
+ * Just like jQuery.nextUntil
+ */
+
+function nextUntil(el, selector) {
+  const nextEl = el.nextSibling;
+  return nextUntilTick(nextEl, selector, []);
+}
+
+function nextUntilTick(el, selector, acc) {
+  if (!el) return acc;
+
+  const isMatch = __WEBPACK_IMPORTED_MODULE_0_dom101_matches___default()(el, selector);
+  if (isMatch) return acc;
+
+  return nextUntilTick(el.nextSibling, selector, [...acc, el]);
+}
+
+/*
+ * Just like jQuery.before
+ */
+
+function before(reference, newNode) {
+  reference.parentNode.insertBefore(newNode, reference);
+}
+
+/*
+ * Like jQuery.children('selector')
+ */
+
+function findChildren(el, selector) {
+  return [].slice.call(el.children).filter(child => __WEBPACK_IMPORTED_MODULE_0_dom101_matches___default()(child, selector));
+}
+
+/**
+ * Creates a div
+ * @private
+ *
+ * @example
+ *
+ *     createDiv({ class: 'foo' })
+ */
+
+function createDiv(props) {
+  const d = document.createElement('div');
+  Object.keys(props).forEach(key => {
+    d.setAttribute(key, props[key]);
+  });
+  return d;
+}
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+/**
+ * on : on(el, event, fn)
+ * Adds an event handler.
+ *
+ *     var on = require('dom101/on');
+ *
+ *     on(el, 'click', function () {
+ *       ...
+ *     });
+ */
+
+function on (el, event, handler) {
+  if (el.addEventListener) {
+    el.addEventListener(event, handler)
+  } else {
+    el.attachEvent('on' + event, function () {
+      handler.call(el)
+    })
+  }
+}
+
+module.exports = on
+
+
+/***/ })
+/******/ ]);</script>
+<script src='./assets/packed/vendor.js?t=20171119174742'></script>
+<script src='./assets/packed/app.js?t=20171119174742'></script>
+
+
+</body>
+</html>

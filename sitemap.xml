@@ -1,10 +1,52 @@
----
-layout: blank
-type: other
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>{{ site.url }}/</loc></url>
-{% for page in site.pages %}{% if page.type == 'article' %}<url><loc>{{ site.url }}{{ page.url | remove: '.html' }}</loc></url>
-{% endif %}{% endfor %}
+<url><loc>http://localhost:4001/</loc></url>
+<url><loc>http://localhost:4001/bash</loc></url>
+<url><loc>http://localhost:4001/bootstrap</loc></url>
+<url><loc>http://localhost:4001/deprecated/bower-api</loc></url>
+<url><loc>http://localhost:4001/brew</loc></url>
+<url><loc>http://localhost:4001/cheatsheet-styles</loc></url>
+<url><loc>http://localhost:4001/cron</loc></url>
+<url><loc>http://localhost:4001/curl</loc></url>
+<url><loc>http://localhost:4001/docker-compose</loc></url>
+<url><loc>http://localhost:4001/docker</loc></url>
+<url><loc>http://localhost:4001/dockerfile</loc></url>
+<url><loc>http://localhost:4001/fitness/general</loc></url>
+<url><loc>http://localhost:4001/gh-pages</loc></url>
+<url><loc>http://localhost:4001/git-branch</loc></url>
+<url><loc>http://localhost:4001/git-extras</loc></url>
+<url><loc>http://localhost:4001/git-log-format</loc></url>
+<url><loc>http://localhost:4001/git-log</loc></url>
+<url><loc>http://localhost:4001/git-revisions</loc></url>
+<url><loc>http://localhost:4001/git-tricks</loc></url>
+<url><loc>http://localhost:4001/go</loc></url>
+<url><loc>http://localhost:4001/html-email</loc></url>
+<url><loc>http://localhost:4001/html-input</loc></url>
+<url><loc>http://localhost:4001/html-meta</loc></url>
+<url><loc>http://localhost:4001/html-microformats</loc></url>
+<url><loc>http://localhost:4001/html-share</loc></url>
+<url><loc>http://localhost:4001/html</loc></url>
+<url><loc>http://localhost:4001/http-status</loc></url>
+<url><loc>http://localhost:4001/jekyll-github</loc></url>
+<url><loc>http://localhost:4001/jekyll</loc></url>
+<url><loc>http://localhost:4001/kramdown</loc></url>
+<url><loc>http://localhost:4001/kubernetes-kubectl</loc></url>
+<url><loc>http://localhost:4001/kubernetes-tricks</loc></url>
+<url><loc>http://localhost:4001/licenses</loc></url>
+<url><loc>http://localhost:4001/markdown</loc></url>
+<url><loc>http://localhost:4001/fitness/micronutrients</loc></url>
+<url><loc>http://localhost:4001/fitness/phat</loc></url>
+<url><loc>http://localhost:4001/wip/php</loc></url>
+<url><loc>http://localhost:4001/python</loc></url>
+<url><loc>http://localhost:4001/react</loc></url>
+<url><loc>http://localhost:4001/sed</loc></url>
+<url><loc>http://localhost:4001/vim</loc></url>
+<url><loc>http://localhost:4001/virtual-dom</loc></url>
+<url><loc>http://localhost:4001/vue</loc></url>
+<url><loc>http://localhost:4001/webpack</loc></url>
+<url><loc>http://localhost:4001/xpath</loc></url>
+<url><loc>http://localhost:4001/yaml</loc></url>
+<url><loc>http://localhost:4001/zsh</loc></url>
+
 </urlset>
+

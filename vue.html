@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang='en' class='no-js '>
+<head>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='./assets/favicon.png' rel='shortcut icon'>
+<meta content='/vue.html' name='app:pageurl'>
+
+
+  <title>Vue cheatsheet</title>
+  <meta content='Vue cheatsheet' property='og:title'>
+  <meta content='Vue cheatsheet' property='twitter:title'>
+  <meta content='article' property='og:type'>
+
+
+
+
+
+  <meta content="The one-page guide to Vue: usage, examples, links, snippets, and more." name="description">
+  <meta content="The one-page guide to Vue: usage, examples, links, snippets, and more." property="og:description">
+  <meta content="The one-page guide to Vue: usage, examples, links, snippets, and more." property="twitter:description">
+
+
+<link rel="canonical" href="http://localhost:4001/vue">
+<meta name="og:url" content="http://localhost:4001/vue">
+
+
+
+
+
+  <meta content='cheatsheets - jimmysong.io' property='og:site_name'>
+
+
+
+
+
+
+
+
+
+  <meta content='JavaScript libraries' property='article:section'>
+
+
+
+
+
+
+
+  <meta property='page:depth' content='1'>
+
+
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+<script>(function(H){H.className=H.className.replace(/\bNoJs\b/,'WithJs')})(document.documentElement)</script>
+<!-- baidu analysis -->
+<meta name="baidu-site-verification" content="g8IYR9SNLF" />
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?11f7d254cfa4e0ca44b175c66d379ecc";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+  <script>(function(d,s){if(window.Promise&&[].includes&&Object.assign&&window.Map)return;var js,sc=d.getElementsByTagName(s)[0];js=d.createElement(s);js.src='https://cdn.polyfill.io/v2/polyfill.min.js';sc.parentNode.insertBefore(js, sc);}(document,'script'))</script>
+
+<!--[if lt IE 9]><script src='//cdnjs.cloudflare.com/ajax/libs/nwmatcher/1.2.5/nwmatcher.min.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.js'></script><script src='//cdn.rawgit.com/gisu/selectivizr/1.0.3/selectivizr.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'></script><![endif]-->
+
+  <style>html{opacity:0}</style>
+  <link href="https://ricostacruz.com/til/assets/style.css?t=20171119174742" rel="stylesheet" />
+  <link href="./assets/style.css?t=20171119174742" rel="stylesheet" />
+  <link href="./assets/print.css?t=20171119174742" rel="stylesheet" media="print" />
+</head>
+<body>
+<div class='all'>
+
+<div class='site-header'>
+  <div class='container'>
+    This is <a href="."><em>cheatsheets - jimmysong.io</em></a> &mdash; a collection of cheatsheets I've written.
+  </div>
+</div>
+
+
+
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://google.com/article"
+  },
+  "headline": "Vue cheatsheet",
+  "image": [ null ],
+  "description": "The one-page guide to Vue: usage, examples, links, snippets, and more."
+}
+</script>
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "http://localhost:4001/#javascript-libraries",
+      "name": "JavaScript libraries"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "http://localhost:4001/vue",
+      "name": "Vue"
+    }
+  }]
+}
+</script>
+
+
+<div class='post-list -single -cheatsheet'>
+  <div class='post-item'>
+    <div class='post-headline -cheatsheet'>
+      <p class='prelude'><span></span></p>
+      <h1><span>Vue</span></h1>
+      
+<ul class="social-list ">
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4001/vue.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Vue.%20http://localhost:4001/vue.html" target="share"><span class="text"></span></a></li>
+  
+</ul>
+
+    </div>
+
+    <div class='post-content -cheatsheet'>
+      
+<h3 id="lists">Lists</h3>
+
+<pre><code class="language-html">&lt;li v-for="todo in todos"&gt;
+  {{ todo.text }}
+  {{ $index }}
+&lt;/li&gt;
+</code></pre>
+
+<h3 id="events">Events</h3>
+
+<pre><code class="language-html">&lt;button v-on:click='submit'&gt;Go&lt;/button&gt;
+</code></pre>
+
+<h3 id="components">Components</h3>
+
+<pre><code class="language-js">new Vue({
+  components: { app: App }
+})
+</code></pre>
+
+<h2 id="api">API</h2>
+
+<pre><code class="language-js">Vue.extend({ ... })        // creating components
+Vue.nextTick(() =&gt; {...})
+
+Vue.set(object, key, val)  // reactive
+Vue.delete(object, key)
+
+Vue.directive('my-dir', { bind, update, unbind })
+// &lt;div v-my-dir='...'&gt;&lt;/div&gt;
+
+Vue.elementDirective('my-dir', { bind, update, unbind })
+// &lt;my-dir&gt;...&lt;/my-dir&gt;
+
+Vue.component('my-component', Vue.extend({ .. }))
+
+Vue.partial('my-partial', '&lt;div&gt;hi {{msg}}&lt;/div&gt;')
+// &lt;partial name='my-partial'&gt;&lt;/partial&gt;
+</code></pre>
+
+<pre><code class="language-js">new Vue({
+  data: { ... }
+  props: ['size'],
+  props: { size: Number },
+  computed: { fullname() { return this.name + ' ' + this.lastName } },
+  methods: { go() { ... } },
+  watch: { a (val, oldVal) { ... } },
+  el: '#foo',
+  template: '...',
+  replace: true, // replace element (default true)
+
+  // lifecycle
+  created () {},
+  beforeCompile () {},
+  compiled () {},
+  ready () {}, // $el is inserted for the first time
+  attached () {},
+  detached () {},
+  beforeDestroy () {},
+  destroyed () {},
+
+  // options
+  directives: {},
+  elementDirectives: {},
+  filters: {},
+  components: {},
+  transitions: {},
+  partials: {}
+})
+</code></pre>
+
+<h2 id="vue-templates">Vue templates</h2>
+<p>Via <a href="https://www.npmjs.com/package/vueify">vueify</a></p>
+
+<pre><code class="language-js">// app.vue
+&lt;template&gt;
+  &lt;h1 class="red"&gt;{{msg}}&lt;/h1&gt;
+&lt;/template&gt;
+ 
+&lt;script&gt;
+  module.exports = {
+    data () {
+      return {
+        msg: 'Hello world!'
+      }
+    }
+  }
+&lt;/script&gt; 
+</code></pre>
+
+<p>Also</p>
+
+<pre><code class="language-html">&lt;template lang='jade'&gt;
+h1(class='red') {{msg}}
+&lt;/template&gt;
+</code></pre>
+
+
+    </div>
+
+    
+<ul class="social-list ">
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4001/vue.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Vue.%20http://localhost:4001/vue.html" target="share"><span class="text"></span></a></li>
+  
+</ul>
+
+  </div>
+</div>
+
+  <div class="about-the-site">
+  <div class="container">
+    <p class='blurb'>
+    <strong><a href=".">cheatsheets - jimmysong.io</a></strong> is a collection of cheatsheets I've written over the years.
+      Suggestions and corrections? <a href='https://github.com/rootsongjc/cheatsheets/issues'>Send them in</a>.
+      <i class='fleuron'></i>
+      I'm <a href="https://jimmysong.io">Jimmy Song</a>
+      Theme by <a href="https://devhints.io">devhint.io</a>
+    </p>
+
+    
+    <p class='back'>
+      <a class='big-button -back -slim' href='.#toc'></a>
+    </p>
+    
+
+    <p>
+    </p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+
+
+
+<!--
+<script src="https://cdn.rawgit.com/rstacruz/unorphan/v1.0.1/index.js"></script>
+-->
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/v1511076302/cheatsheets/index.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script>unorphan('h1, h2, h3, p, li, .unorphan')</script>
+
+</body>
+</html>
+
