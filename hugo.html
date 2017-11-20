@@ -23,25 +23,25 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='./assets/favicon.png' rel='shortcut icon'>
-<meta content='/kubernetes-tricks.html' name='app:pageurl'>
+<meta content='/hugo.html' name='app:pageurl'>
 
 
-  <title>Kubernetes tricks cheatsheet</title>
-  <meta content='Kubernetes tricks cheatsheet' property='og:title'>
-  <meta content='Kubernetes tricks cheatsheet' property='twitter:title'>
+  <title>Hugo cheatsheet</title>
+  <meta content='Hugo cheatsheet' property='og:title'>
+  <meta content='Hugo cheatsheet' property='twitter:title'>
   <meta content='article' property='og:type'>
 
 
 
 
 
-  <meta content="The one-page guide to Kubernetes tricks: usage, examples, links, snippets, and more." name="description">
-  <meta content="The one-page guide to Kubernetes tricks: usage, examples, links, snippets, and more." property="og:description">
-  <meta content="The one-page guide to Kubernetes tricks: usage, examples, links, snippets, and more." property="twitter:description">
+  <meta content="The one-page guide to Hugo: usage, examples, links, snippets, and more." name="description">
+  <meta content="The one-page guide to Hugo: usage, examples, links, snippets, and more." property="og:description">
+  <meta content="The one-page guide to Hugo: usage, examples, links, snippets, and more." property="twitter:description">
 
 
-<link rel="canonical" href="https://jimmysong.io/cheatsheets/kubernetes-tricks">
-<meta name="og:url" content="https://jimmysong.io/cheatsheets/kubernetes-tricks">
+<link rel="canonical" href="https://jimmysong.io/cheatsheets/hugo">
+<meta name="og:url" content="https://jimmysong.io/cheatsheets/hugo">
 
 
 
@@ -57,12 +57,8 @@
 
 
 
-  <meta content='Kubernetes' property='article:section'>
+  <meta content='Hugo' property='article:section'>
 
-
-
-
-  <meta content='Featured' property='article:tag'>
 
 
 
@@ -115,9 +111,9 @@
     "@type": "WebPage",
     "@id": "https://google.com/article"
   },
-  "headline": "Kubernetes tricks cheatsheet",
+  "headline": "Hugo cheatsheet",
   "image": [ null ],
-  "description": "The one-page guide to Kubernetes tricks: usage, examples, links, snippets, and more."
+  "description": "The one-page guide to Hugo: usage, examples, links, snippets, and more."
 }
 </script>
 <script type='application/ld+json'>
@@ -128,15 +124,15 @@
     "@type": "ListItem",
     "position": 1,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/#kubernetes",
-      "name": "Kubernetes"
+      "@id": "https://jimmysong.io/cheatsheets/#hugo",
+      "name": "Hugo"
     }
   },{
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/kubernetes-tricks",
-      "name": "Kubernetes tricks"
+      "@id": "https://jimmysong.io/cheatsheets/hugo",
+      "name": "Hugo"
     }
   }]
 }
@@ -162,8 +158,8 @@
       <div class='actions'>
         
 <ul class="social-list social page-actions">
-  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/kubernetes-tricks.html" target="share"><span class="text"></span></a></li>
-  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Kubernetes%20tricks.%20https://jimmysong.io/cheatsheets/kubernetes-tricks.html" target="share"><span class="text"></span></a></li>
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/hugo.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Hugo.%20https://jimmysong.io/cheatsheets/hugo.html" target="share"><span class="text"></span></a></li>
   
 </ul>
 
@@ -171,7 +167,7 @@
         
           <ul class='page-actions'>
             <li class='link github -button hint--bottom' data-hint='Edit this page on GitHub'>
-              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/kubernetes-tricks.md'>
+              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/hugo.md'>
                 <span class='text -visible'>Edit</span>
               </a>
             </li>
@@ -185,7 +181,7 @@
 
 <div class='body-area'>
   <header class='main-heading -center' role='banner'>
-    <h1 class='h1'>Kubernetes tricks <em>cheatsheet</em></h1>
+    <h1 class='h1'>Hugo <em>cheatsheet</em></h1>
   </header>
 
   
@@ -195,194 +191,40 @@
   
 
   <main class='post-content MarkdownBody' data-js-main-body role='main'>
-    <h2 id="kubernetes-tricks">Kubernetes tricks</h2>
+    <h2 id="hugo">Hugo</h2>
 
-<h3 class="-three-column" id="在容器中获取-pod-的ip">在容器中获取 Pod 的IP</h3>
+<h2 id="quick-start">Quick start</h2>
 
-<p>通过环境变量来实现，该环境变量直接引用 resource 的状态字段，示例如下：</p>
+<h3 id="create-a-new-site">Create a new site</h3>
 
-<pre><code class="language-Yaml">apiVersion: v1
-kind: ReplicationController
-metadata:
-  name: world-v2
-spec:
-  replicas: 3
-  selector:
-    app: world-v2
-  template:
-    metadata:
-      labels:
-        app: world-v2
-    spec:
-      containers:
-      - name: service
-        image: test
-        env:
-        - name: POD_IP
-          valueFrom:
-            fieldRef:
-              fieldPath: status.podIP
-        ports:
-        - name: service
-          containerPort: 777
+<pre><code class="language-bash">hugo new site rootsongjc-hugo
 </code></pre>
 
-<p>容器中可以直接使用 <code>POD_IP</code> 环境变量获取容器的 IP。</p>
+<h3 id="create-a-new-page">Create a new page</h3>
 
-<h3 id="指定容器的启动参数">指定容器的启动参数</h3>
-
-<p>我们可以在 Pod 中为容器使用 command 为容器指定启动参数：</p>
-
-<pre><code class="language-Bash">command: ["/bin/bash","-c","bootstrap.sh"]
+<pre><code class="language-bash">hugo new posts/cheatsheets.md
 </code></pre>
 
-<p>看似很简单，使用数组的方式定义，所有命令使用跟 Dockerfile 中的 CMD 配置是一样的，但是有一点不同的是，<code>bootsttap.sh</code> 必须具有可执行权限，否则容器启动时会出错。</p>
+<p>This will create a new file on <code>contents/posts/cheatsheets.md</code>.</p>
 
-<h3 id="让pod调用宿主机的docker能力">让Pod调用宿主机的docker能力</h3>
+<h3 id="build-site">Build site</h3>
 
-<p>我们可以想象一下这样的场景，让 Pod 来调用宿主机的 docker 能力，只需要将宿主机的 <code>docker</code> 命令和 <code>docker.sock</code> 文件挂载到 Pod 里面即可，如下：</p>
-
-<pre class="-file"><code class="language-Yaml">apiVersion: v1
-kind: Pod
-metadata:
- name: busybox-cloudbomb
-spec:
- containers:
- - image: busybox
- command:
- - /bin/sh
- - "-c"
- - "while true; \
- do \
- docker run -d --name BOOM_$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 6) nginx ; \
- done"
- name: cloudbomb
- volumeMounts:
- - mountPath: /var/run/docker.sock
- name: docker-socket
- - mountPath: /bin/docker
- name: docker-binary
- volumes:
- - name: docker-socket
- hostPath:
- path: /var/run/docker.sock
- - name: docker-binary
- hostPath:
- path: /bin/docker
+<pre><code class="language-bash">hugo
 </code></pre>
 
-<p>参考：<a href="https://www.infoq.com/presentations/patterns-microservices-kubernetes">Architecture Patterns for Microservices in Kubernetes</a></p>
+<p>Your site files located on <code>public</code> folder.</p>
 
-<h3 id="使用init-container初始化应用配置">使用Init container初始化应用配置</h3>
+<h3 id="debug">Debug</h3>
 
-<p>Init container可以在应用程序的容器启动前先按顺序执行一批初始化容器，只有所有Init容器都启动成功后，Pod才算启动成功。看下下面这个例子（来源：<a href="https://stackoverflow.com/questions/44109308/kubernetes-mounting-volume-from-within-init-container">kubernetes: mounting volume from within init container - Stack Overflow</a>）：</p>
-
-<pre><code class="language-yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: init
-  labels:
-    app: init
-  annotations:
-    pod.beta.kubernetes.io/init-containers: '[
-        {
-            "name": "download",
-            "image": "axeclbr/git",
-            "command": [
-                "git",
-                "clone",
-                "https://github.com/mdn/beginner-html-site-scripted",
-                "/var/lib/data"
-            ],
-            "volumeMounts": [
-                {
-                    "mountPath": "/var/lib/data",
-                    "name": "git"
-                }
-            ]
-        }
-    ]'
-spec:
-  containers:
-  - name: run
-    image: docker.io/centos/httpd
-    ports:
-      - containerPort: 80
-    volumeMounts:
-    - mountPath: /var/www/html
-      name: git
-  volumes:
-  - emptyDir: {}
-    name: git
+<pre><code>hugo server
 </code></pre>
 
-<p>这个例子就是用来再应用程序启动前首先从GitHub中拉取代码并存储到共享目录下。</p>
+<p>Debug your site on http://localhost:4001. Any file changed will lead to website live update.</p>
 
-<p>关于Init容器的更详细说明请参考 <a href="../concepts/init-containers.md">init容器</a>。</p>
-
-<h3 id="使容器内时间与宿主机同步">使容器内时间与宿主机同步</h3>
-
-<p>我们下载的很多容器内的时区都是格林尼治时间，与北京时间差8小时，这将导致容器内的日志和文件创建时间与实际时区不符，有两种方式解决这个问题：</p>
+<h2 id="reference">Reference</h2>
 
 <ul>
-  <li>修改镜像中的时区配置文件</li>
-  <li>将宿主机的时区配置文件<code>/etc/localtime</code>使用volume方式挂载到容器中</li>
-</ul>
-
-<p>第二种方式比较简单，不需要重做镜像，只要在应用的yaml文件中增加如下配置：</p>
-
-<pre><code class="language-yaml">volumeMounts:
-  - name: host-time
-    mountPath: /etc/localtime
-    readOnly: true
-  volumes:
-  - name: host-time
-    hostPath:
-      path: /etc/localtime
-</code></pre>
-
-<h3 id="在pod中获取宿主机的主机名namespace等">在Pod中获取宿主机的主机名、namespace等</h3>
-
-<p>这条技巧补充了第一条获取 podIP 的内容，方法都是一样的，只不过列出了更多的引用字段。</p>
-
-<p>参考下面的 pod 定义，每个 pod 里都有一个 {.spec.nodeName} 字段，通过 <code>fieldRef</code> 和环境变量，就可以在Pod中获取宿主机的主机名（访问环境变量<code>MY_NODE_NAME</code>）。</p>
-
-<pre><code class="language-yaml">apiVersion: v1
-kind: Pod
-metadata:
-  name: dapi-test-pod
-spec:
-  containers:
-    - name: test-container
-      image: busybox
-      command: [ "/bin/sh", "-c", "env" ]
-      env:
-        - name: MY_NODE_NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: spec.nodeName
-        - name: MY_POD_NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.name
-        - name: MY_POD_NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
-        - name: MY_POD_IP
-          valueFrom:
-            fieldRef:
-              fieldPath: status.podIP
-        - name: MY_POD_SERVICE_ACCOUNT
-          valueFrom:
-            fieldRef:
-              fieldPath: spec.serviceAccountName
-  restartPolicy: Never
-</code></pre>
-<h2 id="参考">参考</h2>
-
-<ul>
-  <li><a href="https://jimmysong.io/kubernetes-handbook">kubernetes-handbook</a></li>
+  <li><a href="https://gohugo.io">Hugo official website</a></li>
 </ul>
 
   </main>
@@ -446,24 +288,10 @@ spec:
       <div class='group'>
         <div class='related-posts-group'>
           
-            <h3>Other Kubernetes cheatsheets</h3>
+            <h3>Other Hugo cheatsheets</h3>
           
 
           <ul class='related-post-list'>
-            
-              <li class='item related-post-item'>
-  <a href='./kubernetes-kubectl'>
-    <strong>kubectl</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
             
           </ul>
         </div>
@@ -518,8 +346,8 @@ spec:
 
             
               <li class='item related-post-item'>
-  <a href='./html-meta'>
-    <strong>HTML meta tags</strong>
+  <a href='./go'>
+    <strong>Go</strong>
     <span>
       cheatsheet
 
@@ -546,8 +374,8 @@ spec:
 
             
               <li class='item related-post-item'>
-  <a href='./kubernetes-kubectl'>
-    <strong>kubectl</strong>
+  <a href='./html-input'>
+    <strong>Input tag</strong>
     <span>
       cheatsheet
 
@@ -1020,7 +848,7 @@ module.exports = on
 /******/ ]);</script>
 <script src='./assets/packed/vendor.js?t=20171120130208'></script>
 <script src='./assets/packed/app.js?t=20171120130208'></script>
-<script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-bash.min.js'></script><script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-yaml.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-bash.min.js'></script>
 
 
 </body>

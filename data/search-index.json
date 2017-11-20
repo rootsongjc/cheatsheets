@@ -286,6 +286,17 @@
   "tags": null,
   "updated": null
 },{
+  "id": "hugo",
+  "title": "Hugo",
+  "url": "/hugo",
+  "category": "Hugo",
+  "keywords": null,
+  "content_html": "<h2 id=\"hugo\">Hugo</h2>\n\n<h2 id=\"quick-start\">Quick start</h2>\n\n<h3 id=\"create-a-new-site\">Create a new site</h3>\n\n<pre><code class=\"language-bash\">hugo new site rootsongjc-hugo\n</code></pre>\n\n<h3 id=\"create-a-new-page\">Create a new page</h3>\n\n<pre><code class=\"language-bash\">hugo new posts/cheatsheets.md\n</code></pre>\n\n<p>This will create a new file on <code>contents/posts/cheatsheets.md</code>.</p>\n\n<h3 id=\"build-site\">Build site</h3>\n\n<pre><code class=\"language-bash\">hugo\n</code></pre>\n\n<p>Your site files located on <code>public</code> folder.</p>\n\n<h3 id=\"debug\">Debug</h3>\n\n<pre><code>hugo server\n</code></pre>\n\n<p>Debug your site on http://localhost:4001. Any file changed will lead to website live update.</p>\n\n<h2 id=\"reference\">Reference</h2>\n\n<ul>\n  <li><a href=\"https://gohugo.io\">Hugo official website</a></li>\n</ul>",
+  "intro_html": "",
+  "description_html": "",
+  "tags": null,
+  "updated": "2017-11-20"
+},{
   "id": "jekyll-github",
   "title": "Jekyll for GitHub pages",
   "url": "/jekyll-github",
@@ -391,17 +402,6 @@
   "category": "Other",
   "keywords": null,
   "content_html": "<h3 id=\"hello-world\">Hello world</h3>\n\n<h4 id=\"hellophp\">hello.php</h4>\n\n<pre><code class=\"language-php\">&lt;?php\nfunction greetMe($name) {\n  return \"Hello, \" . $name . \"!\";\n}\n\n$message = greetMe($name);\necho $message;\n</code></pre>\n\n<p>All PHP files start with <code>&lt;?php</code>.</p>\n\n<p>See: <a href=\"http://php.net/manual/en/language.basic-syntax.phptags.php\">PHP tags</a></p>\n\n<h3 id=\"objects\">Objects</h3>\n\n<pre><code class=\"language-php\">&lt;?php\n\n$fruits = array(\n  \"apple\" =&gt; 20,\n  \"banana\" =&gt; 30\n)\n</code></pre>\n\n<h3 id=\"inspecting-objects\">Inspecting objects</h3>\n\n<pre><code class=\"language-php\">&lt;?php\nvar_dump($object)\n</code></pre>\n\n<p>Prints the contents of a variable for inspection.</p>\n\n<p>See: <a href=\"http://php.net/var_dump\">var_dump</a></p>",
-  "intro_html": "",
-  "description_html": "",
-  "tags": null,
-  "updated": null
-},{
-  "id": "python",
-  "title": "Python",
-  "url": "/python",
-  "category": "Python",
-  "keywords": null,
-  "content_html": "<h3 id=\"lists\">Lists</h3>\n\n<pre><code>list = []\nlist[i:j]  # returns list subset\nlist[-1]   # access last element\nlist[:-1]  # return all but the last element\n\nlist[i] = val\nlist[i:j] = otherlist  # replace ith to jth element with otherlist\ndel list[i:j]\n\nlist.append(item)\nlist.extend(list)\nlist.insert(0, item)\nlist.pop()\nlist.remove(i)\nlist1 + list2     # combine two list    \nset(list)         # remove duplicate elements from a list\n\nlist.reverse()\nlist.count(item)\nsum(list)\n\nlist.sort()\n\nzip(list1, list2)\nsorted(list)\n\",\".join(list)\n</code></pre>\n\n<h3 id=\"dict\">Dict</h3>\n\n<pre><code>dict.keys()\ndict.values()\n\"key\" in dict\ndict[\"key\"]   # throws KeyError\ndict.get(\"key\")\ndict.setdefault(\"key\", 1)\n</code></pre>\n\n<h3 id=\"iteration\">Iteration</h3>\n\n<pre><code>for item in [\"a\", \"b\", \"c\"]:\nfor i in range(4):     # 0 to 3\nfor i in range(4, 8):  # 4 to 7\nfor key, val in dict.items():\n</code></pre>\n\n<h3 id=\"string\"><a href=\"https://docs.python.org/2/library/stdtypes.html#string-methods\">String</a></h3>\n\n<pre><code>str[0:4]\nlen(str)\n\nstring.replace(\"-\", \" \")\n\",\".join(list)\n\"hi {0}\".format('j')\nstr.find(\",\")\nstr.index(\",\")   # same, but raises IndexError\nstr.count(\",\")\nstr.split(\",\")\n\nstr.lower()\nstr.upper()\nstr.title()\n\nstr.lstrip()\nstr.rstrip()\nstr.strip()\n\nstr.islower()\n</code></pre>\n\n<h3 id=\"casting\">Casting</h3>\n\n<pre><code>int(str)\nfloat(str)\nstr(int)\nstr(float)\n</code></pre>\n\n<h3 id=\"comprehensions\">Comprehensions</h3>\n\n<pre><code>[fn(i) for i in list]            # .map\nmap(fn, list)                    # .map, returns iterator\n\nfilter(fn, list)                 # .filter, returns iterator\n[fn(i) for i in list if i &gt; 0]   # .filter.map\n</code></pre>\n\n<h3 id=\"regex\">Regex</h3>\n\n<pre><code>import re\n\nre.match(r'^[aeiou]', str)\nre.sub(r'^[aeiou]', '?', str)\nre.sub(r'(xyz)', r'\\1', str)\n\nexpr = re.compile(r'^...$')\nexpr.match(...)\nexpr.sub(...)\n</code></pre>",
   "intro_html": "",
   "description_html": "",
   "tags": null,
