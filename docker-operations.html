@@ -23,25 +23,25 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='./assets/favicon.png' rel='shortcut icon'>
-<meta content='/bootstrap.html' name='app:pageurl'>
+<meta content='/docker-operations.html' name='app:pageurl'>
 
 
-  <title>Bootstrap cheatsheet</title>
-  <meta content='Bootstrap cheatsheet' property='og:title'>
-  <meta content='Bootstrap cheatsheet' property='twitter:title'>
+  <title>Docker operations cheatsheet</title>
+  <meta content='Docker operations cheatsheet' property='og:title'>
+  <meta content='Docker operations cheatsheet' property='twitter:title'>
   <meta content='article' property='og:type'>
 
 
 
 
 
-  <meta content=".container .row .col-md-6, @screen-sm-min, .form-control, grids, .modal-content, tooltips, and other Bootstrap CSS examples. · One-page guide to Bootstrap" name="description">
-  <meta content=".container .row .col-md-6, @screen-sm-min, .form-control, grids, .modal-content, tooltips, and other Bootstrap CSS examples. · One-page guide to Bootstrap" property="og:description">
-  <meta content=".container .row .col-md-6, @screen-sm-min, .form-control, grids, .modal-content, tooltips, and other Bootstrap CSS examples. · One-page guide to Bootstrap" property="twitter:description">
+  <meta content="The one-page guide to Docker operations: usage, examples, links, snippets, and more." name="description">
+  <meta content="The one-page guide to Docker operations: usage, examples, links, snippets, and more." property="og:description">
+  <meta content="The one-page guide to Docker operations: usage, examples, links, snippets, and more." property="twitter:description">
 
 
-<link rel="canonical" href="https://jimmysong.io/cheatsheets/bootstrap">
-<meta name="og:url" content="https://jimmysong.io/cheatsheets/bootstrap">
+<link rel="canonical" href="https://jimmysong.io/cheatsheets/docker-operations">
+<meta name="og:url" content="https://jimmysong.io/cheatsheets/docker-operations">
 
 
 
@@ -57,7 +57,7 @@
 
 
 
-  <meta content='Others' property='article:section'>
+  <meta content='Docker' property='article:section'>
 
 
 
@@ -111,9 +111,9 @@
     "@type": "WebPage",
     "@id": "https://google.com/article"
   },
-  "headline": "Bootstrap cheatsheet",
+  "headline": "Docker operations cheatsheet",
   "image": [ null ],
-  "description": ".container .row .col-md-6, @screen-sm-min, .form-control, grids, .modal-content, tooltips, and other Bootstrap CSS examples. · One-page guide to Bootstrap"
+  "description": "The one-page guide to Docker operations: usage, examples, links, snippets, and more."
 }
 </script>
 <script type='application/ld+json'>
@@ -124,15 +124,15 @@
     "@type": "ListItem",
     "position": 1,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/#others",
-      "name": "Others"
+      "@id": "https://jimmysong.io/cheatsheets/#docker",
+      "name": "Docker"
     }
   },{
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/bootstrap",
-      "name": "Bootstrap"
+      "@id": "https://jimmysong.io/cheatsheets/docker-operations",
+      "name": "Docker operations"
     }
   }]
 }
@@ -158,8 +158,8 @@
       <div class='actions'>
         
 <ul class="social-list social page-actions">
-  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/bootstrap.html" target="share"><span class="text"></span></a></li>
-  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Bootstrap.%20https://jimmysong.io/cheatsheets/bootstrap.html" target="share"><span class="text"></span></a></li>
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/docker-operations.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Docker%20operations.%20https://jimmysong.io/cheatsheets/docker-operations.html" target="share"><span class="text"></span></a></li>
   
 </ul>
 
@@ -167,7 +167,7 @@
         
           <ul class='page-actions'>
             <li class='link github -button hint--bottom' data-hint='Edit this page on GitHub'>
-              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/bootstrap.md'>
+              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/docker-operations.md'>
                 <span class='text -visible'>Edit</span>
               </a>
             </li>
@@ -181,7 +181,7 @@
 
 <div class='body-area'>
   <header class='main-heading -center' role='banner'>
-    <h1 class='h1'>Bootstrap <em>cheatsheet</em></h1>
+    <h1 class='h1'>Docker operations <em>cheatsheet</em></h1>
   </header>
 
   
@@ -191,134 +191,20 @@
   
 
   <main class='post-content MarkdownBody' data-js-main-body role='main'>
-    <h3 id="screen-sizes">Screen sizes</h3>
+    <h2 id="docker-for-mac">Docker for Mac</h2>
 
-<pre><code>         768          992                1200
-'     '     '     '     '     '     '     '     '
-&lt;---------^------------^------------------^---------&gt;
-     xs         sm              md             lg
-   (phone)   (tablet)        (laptop)       (desktop)
+<h3 id="删除所有的镜像和容器">删除所有的镜像和容器</h3>
+
+<pre><code class="language-bash">docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
+docker volume rm $(docker volume ls |awk '{print $2}')
+rm -rf ~/Library/Containers/com.docker.docker/Data/*
 </code></pre>
 
-<p>Min:</p>
-
-<pre><code class="language-scss">@media (min-width: @screen-sm-min) // &gt;= 768px (small tablet)
-@media (min-width: @screen-md-min) // &gt;= 992px (medium laptop)
-@media (min-width: @screen-lg-min) // &gt;= 1200px (large desktop)
-</code></pre>
-
-<p>Max:</p>
-
-<pre><code class="language-scss">@media (max-width: @screen-xs-max) { // &lt; 768px (xsmall phone)
-@media (max-width: @screen-sm-max) { // &lt; 992px (small tablet)
-@media (max-width: @screen-md-max) { // &lt; 1200px (medium laptop)
-</code></pre>
-
-<h3 id="columns">Columns</h3>
-
-<pre><code class="language-scss">.container
-.container-fluid
-</code></pre>
-
-<pre><code class="language-scss">.col-xs-1
-.col-sm-1
-.col-md-1
-.col-lg-1
-.col-md-offset-1
-</code></pre>
-
-<p>Mixins:</p>
-
-<pre><code class="language-scss">@include make-xs-column(12);
-@include make-sm-column(6);
-@include make-md-column(3);
-@include make-lg-column(3);
-</code></pre>
-
-<pre><code class="language-scss">@include make-sm-column-offset(1);
-@include make-sm-column-push(1);
-@include make-sm-column-pull(1);
-</code></pre>
-
-<h3 id="utilities">Utilities</h3>
-
-<pre><code class="language-scss">.pull-left
-.pull-right
-</code></pre>
-
-<pre><code class="language-scss">.hidden-{xs,sm,md,lg}
-.visible-{xs,sm,md,lg}
-.visible-{xs,sm,md,lg,print}-{block,inline,inline-block}
-</code></pre>
-
-<pre><code class="language-scss">.center-block  /* margin: auto */
-.clearfix
-.text-{center,left,right,justify,nowrap}
-.text-{lowercase,uppercase,capitalize}
-</code></pre>
-
-<pre><code class="language-scss">.show
-.hidden
-</code></pre>
-
-<h3 id="modal">Modal</h3>
-
-<pre><code class="language-html">&lt;a data-toggle='modal' data-target='#new'&gt;
-</code></pre>
-
-<pre><code class="language-haml">#new.modal.fade(role='dialog')
-  .modal-dialog // .modal-lg, .modal-sm
-    .modal-content
-      .modal-header
-        %h4.modal-title hello
-        %button.close{type: 'button', data: { dismiss: 'modal' }}
-          %span{'aria-hidden' =&gt; true}!= "&amp;times;"
-          %span.sr-only Close
-      .modal-body
-        ...
-      .modal-footer
-        ...
-</code></pre>
-
-<h3 id="modal-via-ajax-rails">Modal via ajax (Rails)</h3>
-
-<pre><code class="language-haml">%button.btn{data: { |
-  toggle: 'modal', |
-  target: '#chooseTheme', |
-  remote: '/path/to/remote'}
-  Change Theme
-</code></pre>
-
-<pre><code class="language-haml">.modal.fade#chooseTheme
-  .modal-dialog.modal-xl
-    .modal-content
-      .modal-header
-        %h4.modal-title Choose a theme
-
-      .modal-body
-        .spinner-panel.-lg
-          %i
-</code></pre>
-
-<h3 id="tooltip">Tooltip</h3>
-
-<pre><code class="language-html">&lt;span
-  data-toggle='tooltip'
-  title='tooltip'
-  data-placement='left|top|bottom|right'&gt;
-</code></pre>
-
-<pre><code class="language-js">$(function () {
-  $('[data-toogle~="tooltip"]').tooltip()
-})
-</code></pre>
-
-<h3 id="input-groups">Input groups</h3>
-
-<pre><code class="language-haml">.input-group
-    input.form-control(type='text')
-    .input-group-addon years
-</code></pre>
+<h2 id="参考">参考</h2>
+<ul>
+  <li><a href="https://github.com/docker/for-mac/issues/371">Docker.qcow2 never shrinks - disk space usage leak in docker for mac #371</a></li>
+</ul>
 
   </main>
 </div>
@@ -381,14 +267,14 @@
       <div class='group'>
         <div class='related-posts-group'>
           
-            <h3>Other cheatsheets</h3>
+            <h3>Other Docker cheatsheets</h3>
           
 
           <ul class='related-post-list'>
             
               <li class='item related-post-item'>
-  <a href='./unicode'>
-    <strong>Unicode</strong>
+  <a href='./docker-compose'>
+    <strong>docker-compose</strong>
     <span>
       cheatsheet
 
@@ -401,8 +287,8 @@
 
             
               <li class='item related-post-item'>
-  <a href='./cheatsheet-styles'>
-    <strong>Cheatsheet styles</strong>
+  <a href='./docker'>
+    <strong>Docker CLI</strong>
     <span>
       cheatsheet
 
@@ -415,49 +301,13 @@
 
             
               <li class='item related-post-item'>
-  <a href='./'>
-    <strong></strong>
-    <span>
-      cheatsheet
-
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./licenses'>
-    <strong>Licenses</strong>
+  <a href='./dockerfile'>
+    <strong>Dockerfile</strong>
     <span>
       cheatsheet
 
       
       <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./data/search-index.json'>
-    <strong></strong>
-    <span>
-      cheatsheet
-
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./sitemap.xml'>
-    <strong></strong>
-    <span>
-      cheatsheet
-
       
     </span>
   </a>
@@ -531,8 +381,8 @@
 
             
               <li class='item related-post-item'>
-  <a href='./html-input'>
-    <strong>Input tag</strong>
+  <a href='./cron'>
+    <strong>Cron</strong>
     <span>
       cheatsheet
 
@@ -1019,7 +869,7 @@ module.exports = on
 /******/ ]);</script>
 <script src='./assets/packed/vendor.js?t=20171120104914'></script>
 <script src='./assets/packed/app.js?t=20171120104914'></script>
-<script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-scss.min.js'></script><script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-haml.min.js'></script><script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-html.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-bash.min.js'></script>
 
 
 </body>
