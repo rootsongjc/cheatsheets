@@ -20,6 +20,6 @@ rm -rf ~/Library/Containers/com.docker.docker/Data/*
 
 Restart docker after that.
 
-## 参考
+## Reference
 
  * [Docker.qcow2 never shrinks - disk space usage leak in docker for mac #371](https://github.com/docker/for-mac/issues/371)
