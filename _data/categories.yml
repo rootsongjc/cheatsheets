@@ -1,6 +1,7 @@
 enabled: true
 names:
-  - BigData
+  - Big Data
+  - Cloud Native
   - Devops
   - Docker
   - Git
