@@ -23,25 +23,25 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='./assets/favicon.png' rel='shortcut icon'>
-<meta content='/jekyll-github.html' name='app:pageurl'>
+<meta content='/prometheus.html' name='app:pageurl'>
 
 
-  <title>Jekyll for GitHub pages cheatsheet</title>
-  <meta content='Jekyll for GitHub pages cheatsheet' property='og:title'>
-  <meta content='Jekyll for GitHub pages cheatsheet' property='twitter:title'>
+  <title>Prometheus cheatsheet</title>
+  <meta content='Prometheus cheatsheet' property='og:title'>
+  <meta content='Prometheus cheatsheet' property='twitter:title'>
   <meta content='article' property='og:type'>
 
 
 
 
 
-  <meta content="The one-page guide to Jekyll for GitHub pages: usage, examples, links, snippets, and more." name="description">
-  <meta content="The one-page guide to Jekyll for GitHub pages: usage, examples, links, snippets, and more." property="og:description">
-  <meta content="The one-page guide to Jekyll for GitHub pages: usage, examples, links, snippets, and more." property="twitter:description">
+  <meta content="The one-page guide to Prometheus: usage, examples, links, snippets, and more." name="description">
+  <meta content="The one-page guide to Prometheus: usage, examples, links, snippets, and more." property="og:description">
+  <meta content="The one-page guide to Prometheus: usage, examples, links, snippets, and more." property="twitter:description">
 
 
-<link rel="canonical" href="https://jimmysong.io/cheatsheets/jekyll-github">
-<meta name="og:url" content="https://jimmysong.io/cheatsheets/jekyll-github">
+<link rel="canonical" href="https://jimmysong.io/cheatsheets/prometheus">
+<meta name="og:url" content="https://jimmysong.io/cheatsheets/prometheus">
 
 
 
@@ -57,12 +57,8 @@
 
 
 
-  <meta content='Jekyll' property='article:section'>
+  <meta content='Cloud Native' property='article:section'>
 
-
-
-
-  <meta content='WIP' property='article:tag'>
 
 
 
@@ -115,9 +111,9 @@
     "@type": "WebPage",
     "@id": "https://google.com/article"
   },
-  "headline": "Jekyll for GitHub pages cheatsheet",
+  "headline": "Prometheus cheatsheet",
   "image": [ null ],
-  "description": "The one-page guide to Jekyll for GitHub pages: usage, examples, links, snippets, and more."
+  "description": "The one-page guide to Prometheus: usage, examples, links, snippets, and more."
 }
 </script>
 <script type='application/ld+json'>
@@ -128,15 +124,15 @@
     "@type": "ListItem",
     "position": 1,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/#jekyll",
-      "name": "Jekyll"
+      "@id": "https://jimmysong.io/cheatsheets/#cloud-native",
+      "name": "Cloud Native"
     }
   },{
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/jekyll-github",
-      "name": "Jekyll for GitHub pages"
+      "@id": "https://jimmysong.io/cheatsheets/prometheus",
+      "name": "Prometheus"
     }
   }]
 }
@@ -162,8 +158,8 @@
       <div class='actions'>
         
 <ul class="social-list social page-actions">
-  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/jekyll-github.html" target="share"><span class="text"></span></a></li>
-  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Jekyll%20for%20GitHub%20pages.%20https://jimmysong.io/cheatsheets/jekyll-github.html" target="share"><span class="text"></span></a></li>
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/prometheus.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Prometheus.%20https://jimmysong.io/cheatsheets/prometheus.html" target="share"><span class="text"></span></a></li>
   
 </ul>
 
@@ -171,7 +167,7 @@
         
           <ul class='page-actions'>
             <li class='link github -button hint--bottom' data-hint='Edit this page on GitHub'>
-              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/jekyll-github.md'>
+              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/prometheus.md'>
                 <span class='text -visible'>Edit</span>
               </a>
             </li>
@@ -185,13 +181,9 @@
 
 <div class='body-area'>
   <header class='main-heading -center' role='banner'>
-    <h1 class='h1'>Jekyll for GitHub pages <em>cheatsheet</em></h1>
+    <h1 class='h1'>Prometheus <em>cheatsheet</em></h1>
   </header>
 
-  
-    <aside class='notice-box'>
-      This page is a work in progress. You can help by <a href='http://github.com/rootsongjc/cheatsheets/blob/master/jekyll-github.md'>suggesting edits</a>!
-    </aside>
   
 
   
@@ -199,123 +191,163 @@
   
 
   <main class='post-content MarkdownBody' data-js-main-body role='main'>
-    
-<h2 class="-one-column" id="jekyll">Jekyll</h2>
+    <h2 class="-three-column" id="getting-started">Getting started</h2>
 
-<ul class="-four-column">
-  <li>jekyll-avatar</li>
-  <li>jekyll-coffeescript</li>
-  <li>jekyll-default-layout</li>
-  <li>jekyll-feed</li>
-  <li>jekyll-gist</li>
-  <li>jekyll-github-metadata</li>
-  <li>jekyll-mentions</li>
-  <li>jekyll-optional-front-matter</li>
-  <li>jekyll-paginate</li>
-  <li>jekyll-readme-index</li>
-  <li>jekyll-redirect-from</li>
-  <li>jekyll-relative-links</li>
-  <li>jekyll-sass-converter</li>
-  <li>jekyll-seo-tag</li>
-  <li>jekyll-sitemap</li>
+<h2 id="basic">Basic</h2>
+
+<h3 id="data-model">Data Model</h3>
+
+<p>Prometheus fundamentally stores all data as <a href="http://en.wikipedia.org/wiki/Time_series"><em>time series</em></a>.</p>
+
+<pre><code class="language-bash"># Type
+&lt;metric name&gt;{&lt;label name&gt;=&lt;label value&gt;, ...}
+# Example
+api_http_requests_total{method="POST", handler="/messages"}
+</code></pre>
+
+<p>This is the same notation that <a href="http://opentsdb.net/">OpenTSDB</a> uses.</p>
+
+<h3 id="metric-types">Metric Types</h3>
+
+<p>The Prometheus client libraries offer four core metric types.</p>
+
+<ul>
+  <li>Counter</li>
+  <li>Gauge</li>
+  <li>Histogram</li>
+  <li>Summary</li>
 </ul>
 
-<p>As of github-pages v156. For an updated list, see: <a href="https://pages.github.com/versions/">Dependency versions</a> <em>(pages.github.com)</em></p>
+<p>Support Go, Java, Python and Ruby client libraries.</p>
 
-<h2 id="github-metadata">GitHub Metadata</h2>
+<p>See: <a href="https://prometheus.io/docs/concepts/metric_types/">https://prometheus.io/docs/concepts/metric_types/</a></p>
 
-<h3 id="configuration">Configuration</h3>
+<h3 id="jobs-and-instances">Jobs and Instances</h3>
 
-<pre><code class="language-yaml">plugins:
-  - jekyll-github-metadata
+<p>For example, an API server job with four replicated instances:</p>
 
-repository: username/project
+<ul>
+  <li>job: <code>api-server</code>
+    <ul>
+      <li>instance 1: <code>1.2.3.4:5670</code></li>
+      <li>instance 2: <code>1.2.3.4:5671</code></li>
+      <li>instance 3: <code>5.6.7.8:5670</code></li>
+      <li>instance 4: <code>5.6.7.8:5671</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>For each instance scrape, Prometheus stores a sample in the following time series:</p>
+
+<pre><code class="language-bash">up{job="&lt;job-name&gt;", instance="&lt;instance-id&gt;"}: 1 #表示该实例正常工作
+up{job="&lt;job-name&gt;", instance="&lt;instance-id&gt;"}: 0 #表示该实例故障
+scrape_duration_seconds{job="&lt;job-name&gt;", instance="&lt;instance-id&gt;"} #表示拉取数据的时间间隔
+scrape_samples_post_metric_relabeling{job="&lt;job-name&gt;", instance="&lt;instance-id&gt;"} #表示采用重定义标签（relabeling）操作后仍然剩余的样本数
+scrape_samples_scraped{job="&lt;job-name&gt;", instance="&lt;instance-id&gt;"}  #表示从该数据源获取的样本数
 </code></pre>
 
-<p>Put this in your <code>_config.yml</code>.
-See: <a href="https://help.github.com/articles/repository-metadata-on-github-pages/">Repository metadata on GitHub pages</a></p>
+<h2 id="configuration">Configuration</h2>
 
-<h3 id="listing-erpos">Listing erpos</h3>
+<h3 id="generic-placeholder">Generic placeholder</h3>
 
-<pre><code class="language-html">{% for repository in site.github.public_repositories %}
-  &lt;a href='{{ repository.html_url }}'&gt;
-    {{ repository.name }}
-  &lt;/a&gt;
-{% endfor %}
+<ul>
+  <li><code>&lt;boolean&gt;</code>: a boolean that can take the values <code>true</code> or <code>false</code></li>
+  <li><code>&lt;duration&gt;</code>: a duration matching the regular expression <code>[0-9]+(ms|[smhdwy])</code></li>
+  <li><code>&lt;labelname&gt;</code>: a string matching the regular expression <code>[a-zA-Z_][a-zA-Z0-9_]*</code></li>
+  <li><code>&lt;labelvalue&gt;</code>: a string of unicode characters</li>
+  <li><code>&lt;filename&gt;</code>: a valid path in the current working directory</li>
+  <li><code>&lt;host&gt;</code>: a valid string consisting of a hostname or IP followed by an optional port number</li>
+  <li><code>&lt;path&gt;</code>: a valid URL path</li>
+  <li><code>&lt;scheme&gt;</code>: a string that can take the values <code>http</code> or <code>https</code></li>
+  <li><code>&lt;string&gt;</code>: a regular string</li>
+  <li><code>&lt;secret&gt;</code>: a regular string that is a secret, such as a password</li>
+  <li><code>&lt;tmpl_string&gt;</code>: a string which is template-expanded before usage</li>
+</ul>
+
+<h3 id="global-config">Global config</h3>
+
+<pre><code class="language-bash">global:
+  # How frequently to scrape targets by default.
+  [ scrape_interval: &lt;duration&gt; | default = 1m ]
+
+  # How long until a scrape request times out.
+  [ scrape_timeout: &lt;duration&gt; | default = 10s ]
+
+  # How frequently to evaluate rules.
+  [ evaluation_interval: &lt;duration&gt; | default = 1m ]
+
+  # The labels to add to any time series or alerts when communicating with
+  # external systems (federation, remote storage, Alertmanager).
+  external_labels:
+    [ &lt;labelname&gt;: &lt;labelvalue&gt; ... ]
+
+# Rule files specifies a list of globs. Rules and alerts are read from
+# all matching files.
+rule_files:
+  [ - &lt;filepath_glob&gt; ... ]
+
+# A list of scrape configurations.
+scrape_configs:
+  [ - &lt;scrape_config&gt; ... ]
+
+# Alerting specifies settings related to the Alertmanager.
+alerting:
+  alert_relabel_configs:
+    [ - &lt;relabel_config&gt; ... ]
+  alertmanagers:
+    [ - &lt;alertmanager_config&gt; ... ]
+
+# Settings related to the experimental remote write feature.
+remote_write:
+  [ - &lt;remote_write&gt; ... ]
+
+# Settings related to the experimental remote read feature.
+remote_read:
+  [ - &lt;remote_read&gt; ... ]
 </code></pre>
 
-<h3 id="link-to-repo">Link to repo</h3>
+<p>See <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">https://prometheus.io/docs/prometheus/latest/configuration/configuration/</a></p>
 
-<pre><code class="language-html">&lt;a href='{{ site.github.repository_url }}'&gt;
-  {{ site.github.project_title }}
-&lt;/a&gt;
+<h3 id="scrape-config">Scrape config</h3>
+
+<pre><code class="language-bash"># The job name assigned to scraped metrics by default.
+job_name: &lt;job_name&gt;
+
+# How frequently to scrape targets from this job.
+[ scrape_interval: &lt;duration&gt; | default = &lt;global_config.scrape_interval&gt; ]
+
+# Per-scrape timeout when scraping this job.
+[ scrape_timeout: &lt;duration&gt; | default = &lt;global_config.scrape_timeout&gt; ]
+
+# The HTTP resource path on which to fetch metrics from targets.
+[ metrics_path: &lt;path&gt; | default = /metrics ]
+
+[ honor_labels: &lt;boolean&gt; | default = false ]
+
+# Configures the protocol scheme used for requests.
+[ scheme: &lt;scheme&gt; | default = http ]
+
+# Optional HTTP URL parameters.
+params:
+  [ &lt;string&gt;: [&lt;string&gt;, ...] ]
+
+# Sets the `Authorization` header on every scrape request with the
+# configured username and password.
+basic_auth:
+  [ username: &lt;string&gt; ]
+  [ password: &lt;secret&gt; ]
+
+# Sets the `Authorization` header on every scrape request with
+# the configured bearer token. It is mutually exclusive with `bearer_token_file`.
+[ bearer_token: &lt;secret&gt; ]
 </code></pre>
 
-<h2 id="gists">Gists</h2>
+<h2 id="references">References</h2>
 
-<h3 id="configuration-1">Configuration</h3>
-
-<pre><code class="language-yaml">plugins:
-  - jekyll-gist
-</code></pre>
-
-<p>See: <a href="https://github.com/jekyll/jekyll-gist">jekyll-gist</a></p>
-
-<h3 id="usage">Usage</h3>
-
-<pre><code class="language-js">{% gist parkr/c08ee0f2726fd0e3909d %}
-</code></pre>
-
-<p>This places a Gist in your page.</p>
-
-<h2 id="mentions">Mentions</h2>
-
-<h3 id="configuration-2">Configuration</h3>
-
-<pre><code class="language-yaml">plugins:
-  - jekyll-mentions
-</code></pre>
-
-<p>See: <a href="https://github.com/jekyll/jekyll-mentions">jekyll-mentions</a></p>
-
-<h3 id="usage-1">Usage</h3>
-
-<pre><code class="language-js">Hey @rstacruz, what do you think of this?
-</code></pre>
-
-<p>Just mention anyone in any page. Their names will be turned into links.</p>
-
-<h2 class="-three-column" id="redirects">Redirects</h2>
-
-<h3 id="configuration-3">Configuration</h3>
-
-<pre><code class="language-yaml">plugins:
-    - jekyll-redirect-from
-</code></pre>
-
-<p>See: <a href="https://rubygems.org/gems/jekyll-redirect-from">jekyll-redirect-from</a></p>
-
-<h3 id="usage-2">Usage</h3>
-
-<pre><code class="language-yaml">---
-redirect_from:
-  - /foo
----
-</code></pre>
-
-<p>Place on any page.</p>
-
-<h3 id="redirecting">Redirecting</h3>
-
-<pre><code class="language-yaml">---
-redirect_to:
-  - /foo
----
-</code></pre>
-
-<p>Place on any page.
-See: <a href="https://github.com/jekyll/jekyll-redirect-from#redirect-to">redirect to</a></p>
-
+<ul>
+  <li><a href="https://prometheus.io/">Prometheus.io</a></li>
+  <li><a href="https://github.com/songjiayang/prometheus_practice">Prometheus practice 中文 - songjiayang</a></li>
+</ul>
 
   </main>
 </div>
@@ -378,38 +410,10 @@ See: <a href="https://github.com/jekyll/jekyll-redirect-from#redirect-to">redire
       <div class='group'>
         <div class='related-posts-group'>
           
-            <h3>Other Jekyll cheatsheets</h3>
+            <h3>Other Cloud Native cheatsheets</h3>
           
 
           <ul class='related-post-list'>
-            
-              <li class='item related-post-item'>
-  <a href='./gh-pages'>
-    <strong>GitHub pages</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./jekyll'>
-    <strong>Jekyll</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
             
           </ul>
         </div>
@@ -464,20 +468,6 @@ See: <a href="https://github.com/jekyll/jekyll-redirect-from#redirect-to">redire
 
             
               <li class='item related-post-item'>
-  <a href='./cron'>
-    <strong>Cron</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
   <a href='./kubernetes-kubectl'>
     <strong>kubectl</strong>
     <span>
@@ -494,6 +484,20 @@ See: <a href="https://github.com/jekyll/jekyll-redirect-from#redirect-to">redire
               <li class='item related-post-item'>
   <a href='./kubernetes-tricks'>
     <strong>Kubernetes tricks</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./html-input'>
+    <strong>Input tag</strong>
     <span>
       cheatsheet
 
@@ -966,7 +970,7 @@ module.exports = on
 /******/ ]);</script>
 <script src='./assets/packed/vendor.js?t=20171120175727'></script>
 <script src='./assets/packed/app.js?t=20171120175727'></script>
-
+<script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-ini.min.js'></script><script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-bash.min.js'></script>
 
 
 </body>
