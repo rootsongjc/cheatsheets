@@ -198,6 +198,17 @@
   "tags": null,
   "updated": null
 },{
+  "id": "go-tools",
+  "title": "Go tools",
+  "url": "/go-tools",
+  "category": "Go",
+  "keywords": null,
+  "content_html": "<h2 id=\"go-tools\">Go tools</h2>\n<h3 id=\"go-cross-platform-compile\">Go cross-platform compile</h3>\n<h4 id=\"goxc\">goxc</h4>\n\n<p>A build tool for Go, with a focus on cross-compiling, packaging and deployment</p>\n\n<pre><code class=\"language-bash\">goxc -d=build -pv=0.1.0\n</code></pre>\n\n<p>See <a href=\"https://github.com/laher/goxc\">https://github.com/laher/goxc</a></p>",
+  "intro_html": "",
+  "description_html": "",
+  "tags": ["Featured"],
+  "updated": "2017-09-15"
+},{
   "id": "go",
   "title": "Go",
   "url": "/go",
