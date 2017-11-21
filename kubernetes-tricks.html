@@ -100,11 +100,11 @@
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20171121144227'
+'./assets/2017/style.css?t=20171121235649'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20171121144227'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20171121235649'>
 </noscript>
 
 <script type='application/ld+json'>
@@ -379,6 +379,24 @@ spec:
               fieldPath: spec.serviceAccountName
   restartPolicy: Never
 </code></pre>
+<h3 id="配置pod使用外部dns">配置Pod使用外部DNS</h3>
+
+<p>修改kube-dns的使用的ConfigMap。</p>
+
+<pre><code class="language-yaml">apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kube-dns
+  namespace: kube-system
+data:
+  stubDomains: |
+    {"k8s.com": ["192.168.10.10"]}
+  upstreamNameservers: |
+    ["8.8.8.8", "8.8.4.4"]
+</code></pre>
+
+<p><code>upstreamNameservers</code> 即使用的外部DNS，参考：<a href="http://blog.kubernetes.io/2017/04/configuring-private-dns-zones-upstream-nameservers-kubernetes.html">Configuring Private DNS Zones and Upstream Nameservers in Kubernetes</a></p>
+
 <h2 id="参考">参考</h2>
 
 <ul>
@@ -408,7 +426,7 @@ spec:
       
         
         
-        placeholder='Search 54+ cheatsheets'
+        placeholder='Search 55+ cheatsheets'
       >
   </label>
 </form>
@@ -433,7 +451,7 @@ spec:
             <i class='icon'></i>
 
             <span class='description'>
-              Over 54 curated cheatsheets, by developers for developers.
+              Over 55 curated cheatsheets, by developers for developers.
             </span>
 
             <span class='push-button -dark'>
@@ -476,20 +494,6 @@ spec:
           <ul class='related-post-list'>
             
               <li class='item related-post-item'>
-  <a href='./react'>
-    <strong>React.js</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
   <a href='./vim'>
     <strong>Vim</strong>
     <span>
@@ -504,8 +508,8 @@ spec:
 
             
               <li class='item related-post-item'>
-  <a href='./xpath'>
-    <strong>Xpath</strong>
+  <a href='./react'>
+    <strong>React.js</strong>
     <span>
       cheatsheet
 
@@ -518,8 +522,8 @@ spec:
 
             
               <li class='item related-post-item'>
-  <a href='./cron'>
-    <strong>Cron</strong>
+  <a href='./xpath'>
+    <strong>Xpath</strong>
     <span>
       cheatsheet
 
@@ -548,6 +552,20 @@ spec:
               <li class='item related-post-item'>
   <a href='./go'>
     <strong>Go</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./html-input'>
+    <strong>Input tag</strong>
     <span>
       cheatsheet
 
@@ -1018,8 +1036,8 @@ module.exports = on
 
 /***/ })
 /******/ ]);</script>
-<script src='./assets/packed/vendor.js?t=20171121144227'></script>
-<script src='./assets/packed/app.js?t=20171121144227'></script>
+<script src='./assets/packed/vendor.js?t=20171121235649'></script>
+<script src='./assets/packed/app.js?t=20171121235649'></script>
 <script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-bash.min.js'></script><script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-yaml.min.js'></script>
 
 

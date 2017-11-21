@@ -23,25 +23,25 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='./assets/favicon.png' rel='shortcut icon'>
-<meta content='/html.html' name='app:pageurl'>
+<meta content='/fd.html' name='app:pageurl'>
 
 
-  <title>HTML cheatsheet</title>
-  <meta content='HTML cheatsheet' property='og:title'>
-  <meta content='HTML cheatsheet' property='twitter:title'>
+  <title>fd cheatsheet</title>
+  <meta content='fd cheatsheet' property='og:title'>
+  <meta content='fd cheatsheet' property='twitter:title'>
   <meta content='article' property='og:type'>
 
 
 
 
 
-  <meta content="The one-page guide to HTML: usage, examples, links, snippets, and more." name="description">
-  <meta content="The one-page guide to HTML: usage, examples, links, snippets, and more." property="og:description">
-  <meta content="The one-page guide to HTML: usage, examples, links, snippets, and more." property="twitter:description">
+  <meta content="The one-page guide to fd: usage, examples, links, snippets, and more." name="description">
+  <meta content="The one-page guide to fd: usage, examples, links, snippets, and more." property="og:description">
+  <meta content="The one-page guide to fd: usage, examples, links, snippets, and more." property="twitter:description">
 
 
-<link rel="canonical" href="https://jimmysong.io/cheatsheets/html">
-<meta name="og:url" content="https://jimmysong.io/cheatsheets/html">
+<link rel="canonical" href="https://jimmysong.io/cheatsheets/fd">
+<meta name="og:url" content="https://jimmysong.io/cheatsheets/fd">
 
 
 
@@ -57,7 +57,7 @@
 
 
 
-  <meta content='HTML' property='article:section'>
+  <meta content='Linux' property='article:section'>
 
 
 
@@ -111,9 +111,9 @@
     "@type": "WebPage",
     "@id": "https://google.com/article"
   },
-  "headline": "HTML cheatsheet",
+  "headline": "fd cheatsheet",
   "image": [ null ],
-  "description": "The one-page guide to HTML: usage, examples, links, snippets, and more."
+  "description": "The one-page guide to fd: usage, examples, links, snippets, and more."
 }
 </script>
 <script type='application/ld+json'>
@@ -124,15 +124,15 @@
     "@type": "ListItem",
     "position": 1,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/#html",
-      "name": "HTML"
+      "@id": "https://jimmysong.io/cheatsheets/#linux",
+      "name": "Linux"
     }
   },{
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/html",
-      "name": "HTML"
+      "@id": "https://jimmysong.io/cheatsheets/fd",
+      "name": "fd"
     }
   }]
 }
@@ -158,8 +158,8 @@
       <div class='actions'>
         
 <ul class="social-list social page-actions">
-  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/html.html" target="share"><span class="text"></span></a></li>
-  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20HTML.%20https://jimmysong.io/cheatsheets/html.html" target="share"><span class="text"></span></a></li>
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/fd.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20fd.%20https://jimmysong.io/cheatsheets/fd.html" target="share"><span class="text"></span></a></li>
   
 </ul>
 
@@ -167,7 +167,7 @@
         
           <ul class='page-actions'>
             <li class='link github -button hint--bottom' data-hint='Edit this page on GitHub'>
-              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/html.md'>
+              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/fd.md'>
                 <span class='text -visible'>Edit</span>
               </a>
             </li>
@@ -181,7 +181,7 @@
 
 <div class='body-area'>
   <header class='main-heading -center' role='banner'>
-    <h1 class='h1'>HTML <em>cheatsheet</em></h1>
+    <h1 class='h1'>fd <em>cheatsheet</em></h1>
   </header>
 
   
@@ -191,122 +191,88 @@
   
 
   <main class='post-content MarkdownBody' data-js-main-body role='main'>
-    <h3 id="head-stuff">Head stuff</h3>
+    <h2 id="fd">fd</h2>
 
-<pre><code>&lt;link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"&gt;
-&lt;link rel="shortcut icon" type="image/png" href="/favicon.png"&gt;
-&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+<h2 id="basic">Basic</h2>
+
+<h3 id="find-files">find files</h3>
+
+<p>Fd is a simple, fast and user-friendly alternative to find, implement with Rust.</p>
+
+<pre><code class="language-bash"># find markdown files on _docs folder
+fd -e md `pwd`/_docs
+# find file with kubernetes prefix on ~/Documents
+fd '^kubernetes*' ~/Documents
 </code></pre>
 
-<h3 id="iphone-viewport">iPhone viewport</h3>
+<h3 id="find-files-and-execute-command">find files and execute command</h3>
 
-<pre><code>&lt;meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"&gt;
-&lt;meta name="viewport" content="width=device-width"&gt;
-&lt;meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/&gt; &lt;!-- full example --&gt;
+<p>Using fd with xargs</p>
+
+<pre><code class="language-bash">fd -e md -d 1 | xargs wc -l
 </code></pre>
 
-<h3 id="default-opengraph-meta-tags">Default OpenGraph meta tags</h3>
+<p>Count lines number of markdown files on current directory.</p>
 
-<pre><code>&lt;meta content="..." name="description"&gt;
-&lt;meta content="..." property="og:description"&gt;
-&lt;meta content="http://.../preview.jpg" property="og:image"&gt;
-&lt;meta content="Hello There" property="og:title"&gt;
-&lt;meta content="Hello There" property="og:site_name"&gt;
-&lt;meta content="hellothere" property="fb:admins"&gt;
-&lt;meta content="website" property="og:type"&gt;
+<h2 id="advanced">Advanced</h2>
+
+<h3 id="usage">Usage</h3>
+
+<pre><code class="language-bash">fd [FLAGS/OPTIONS] [&lt;pattern&gt;] [&lt;path&gt;]
 </code></pre>
 
-<h3 id="webfonts">Webfonts</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Express</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-d, –max-depth <depth></depth></td>
+      <td>-d 3</td>
+      <td>Set maximum search depth (default: none)</td>
+    </tr>
+    <tr>
+      <td>-t, –type <filetype></filetype></td>
+      <td>-t f</td>
+      <td>Filter by type: f(ile), d(irectory), (sym)l(ink)</td>
+    </tr>
+    <tr>
+      <td>-e, –extension <ext></ext></td>
+      <td>-e md</td>
+      <td>Filter by file extension</td>
+    </tr>
+    <tr>
+      <td>-x, –exec <cmd>...</cmd></td>
+      <td>-x unzip</td>
+      <td>Execute a command for each search result</td>
+    </tr>
+    <tr>
+      <td>-E, –exclude <pattern>...</pattern></td>
+      <td>-E ‘^test’</td>
+      <td>Exclude entries that match the given glob pattern.</td>
+    </tr>
+    <tr>
+      <td>-c, –color <when></when></td>
+      <td>-c never</td>
+      <td>When to use colors: never, <em>auto</em>, always</td>
+    </tr>
+    <tr>
+      <td>-j, –threads <num></num></td>
+      <td>-j 3</td>
+      <td>Set number of threads to use for searching &amp; executing</td>
+    </tr>
+  </tbody>
+</table>
 
-<pre><code>&lt;script&gt;WebFontConfig={    },function(a,b){var c=a.createElement(b);c.src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",c.async=1;var d=a.getElementsByTagName(b)[0];d.parentNode.insertBefore(c,d)}(document,"script")&lt;/script&gt;
-
-// {typekit{id:"..."}}
-// {google:{families:['Exo:400']}}
-</code></pre>
-
-<h3 id="google-analytics">Google Analytics</h3>
-
-<pre><code>&lt;script&gt;location.hostname.match(/helloworld\.com/)&amp;&amp;(_gaq=[["_setAccount","UA-XXXXX-1"],["_trackPageview"]],function(a,b){var c=a.createElement(b),d=a.getElementsByTagName(b)[0];c.async=1,c.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js",d.parentNode.insertBefore(c,d)}(document,"script"))&lt;/script&gt;
-</code></pre>
-
-<h3 id="fbtwitter">FB/Twitter</h3>
-
-<pre><code>&lt;div id="fb-root"&gt;&lt;/div&gt;&lt;script&gt;fbAsyncInit=function(){FB.init({"appId":"___APPIDGOESHERE___","status":true,"cookie":true,"xfbml":true})};!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=1;js.src='//connect.facebook.net/en_US/all.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','facebook-jssdk');&lt;/script&gt;
-
-&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=1;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;
-</code></pre>
-
-<h3 id="html5-shiv-for-ie8">HTML5 Shiv for IE8</h3>
-
-<pre><code>&lt;!--[if lte IE 8]&gt;&lt;script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js'&gt;&lt;/script&gt;&lt;![endif]--&gt;
-</code></pre>
-
-<h3 id="h5bp-html-tag-ie8-and-ie9-only">H5BP HTML tag (IE8 and IE9 only)</h3>
-
-<pre><code>&lt;!--[if lte IE 8]&gt;&lt;html class="ie8"&gt;&lt;![endif]--&gt;&lt;!--[if IE 9]&gt;&lt;html class="ie9"&gt;&lt;![endif]--&gt;&lt;!--[if gt IE 9]&gt;&lt;!--&gt;
-&lt;html&gt;&lt;!--&lt;![endif]--&gt;
-</code></pre>
-
-<h3 id="touch-icons">Touch icons</h3>
+<h2 id="see-also">See also</h2>
 
 <ul>
-  <li>apple-touch-icon-precomposed.png</li>
-  <li>apple-touch-icon-57x57-precomposed.png</li>
-  <li>apple-touch-icon-72x72-precomposed.png</li>
-  <li>apple-touch-icon-114x114-precomposed.png</li>
-  <li>apple-touch-icon-144x144-precomposed.png</li>
+  <li>See <a href="http://github.com/ftrvxmtrx/fd">http://github.com/ftrvxmtrx/fd</a></li>
 </ul>
-
-<h3 id="icons">Icons</h3>
-
-<pre><code>&lt;link rel="shortcut icon" type="image/png" href="favicon.png"&gt;
-&lt;link href="apple-touch-icon-precomposed.png" rel="apple-touch-icon"&gt;
-&lt;link href="apple-touch-icon-57x57-precomposed.png" size="57x57" rel="apple-touch-icon"&gt;
-&lt;link href="apple-touch-icon-72x72-precomposed.png" size="72x72" rel="apple-touch-icon"&gt;
-&lt;link href="apple-touch-icon-114x114-precomposed.png" size="114x114" rel="apple-touch-icon"&gt;
-&lt;link href="apple-touch-icon-144x144-precomposed.png" size="144x144" rel="apple-touch-icon"&gt;
-</code></pre>
-
-<p>Only do this if you’re not placing the site in the root!</p>
-
-<h3 id="h5bp-html-tag">H5BP HTML tag</h3>
-
-<pre><code>&lt;!--[if lt IE 7 ]&gt; &lt;html class="ie6"&gt; &lt;![endif]--&gt;
-&lt;!--[if IE 7 ]&gt;    &lt;html class="ie7"&gt; &lt;![endif]--&gt;
-&lt;!--[if IE 8 ]&gt;    &lt;html class="ie8"&gt; &lt;![endif]--&gt;
-&lt;!--[if IE 9 ]&gt;    &lt;html class="ie9"&gt; &lt;![endif]--&gt;
-&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt; &lt;html class=""&gt; &lt;!--&lt;![endif]--&gt;
-</code></pre>
-
-<h3 id="google-jquery">Google jQuery</h3>
-
-<pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
-</code></pre>
-
-<h3 id="unsupported-message">Unsupported message</h3>
-
-<pre><code>&lt;!--[if lt IE 8]&gt;
-&lt;div class="unsupported-browser"&gt;
-  &lt;strong&gt;
-    You are using an outdated browser.
-  &lt;/strong&gt;
-  &lt;span&gt;
-    Please &lt;a class="upgrade-browser"
-    href="http://browsehappy.com/"&gt;
-    upgrade your browser&lt;/a&gt; or &lt;a  class="chrome-frame"
-    href="http://www.google.com/chromeframe/?redirect=true"&gt;activate Google 
-    Chrome Frame&lt;/a&gt; to improve your experience.
-  &lt;/span&gt;
-&lt;/div&gt;
-&lt;![endif]--&gt;
-</code></pre>
-
-<h3 id="html-compatibility-inspector">HTML Compatibility inspector</h3>
-
-<pre><code>&lt;script src="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/inspector.js"&gt;&lt;/script&gt;
-</code></pre>
-
-<p>More info here: <a href="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">microsoft.com</a></p>
 
   </main>
 </div>
@@ -369,150 +335,14 @@
       <div class='group'>
         <div class='related-posts-group'>
           
-            <h3>Other HTML cheatsheets</h3>
+            <h3>Other Linux cheatsheets</h3>
           
 
           <ul class='related-post-list'>
             
               <li class='item related-post-item'>
-  <a href='./xpath'>
-    <strong>Xpath</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./html-input'>
-    <strong>Input tag</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./html-meta'>
-    <strong>HTML meta tags</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./html-email'>
-    <strong>HTML emails</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./html-microformats'>
-    <strong>Microformats</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./html-share'>
-    <strong>Share links</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-          </ul>
-        </div>
-      </div>
-
-      <div class='group'>
-        <div class='related-posts-group'>
-          <h3>Top cheatsheets</h3>
-
-          <ul class='related-post-list'>
-            
-              <li class='item related-post-item'>
-  <a href='./react'>
-    <strong>React.js</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
   <a href='./vim'>
     <strong>Vim</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./xpath'>
-    <strong>Xpath</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./go'>
-    <strong>Go</strong>
     <span>
       cheatsheet
 
@@ -539,8 +369,144 @@
 
             
               <li class='item related-post-item'>
-  <a href='./go-tools'>
-    <strong>Go tools</strong>
+  <a href='./bash'>
+    <strong>Bash scripting</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./curl'>
+    <strong>Curl</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./sed'>
+    <strong>sed</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./zsh'>
+    <strong>zsh</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class='group'>
+        <div class='related-posts-group'>
+          <h3>Top cheatsheets</h3>
+
+          <ul class='related-post-list'>
+            
+              <li class='item related-post-item'>
+  <a href='./vim'>
+    <strong>Vim</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./react'>
+    <strong>React.js</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./xpath'>
+    <strong>Xpath</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./html-meta'>
+    <strong>HTML meta tags</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./cron'>
+    <strong>Cron</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./kubernetes-kubectl'>
+    <strong>kubectl</strong>
     <span>
       cheatsheet
 
