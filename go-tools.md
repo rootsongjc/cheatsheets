@@ -20,3 +20,18 @@ goxc -d=build -pv=0.1.0
 
 See <https://github.com/laher/goxc>
 
+### Word count
+
+#### cnwordcount
+
+Count Chinese characters in a file.
+
+```bash
+$ cnwordcount -f file.md
+file.md 12
+```
+
+See <https://github.com/rootsongjc/cnwordcount>
+
+
+
