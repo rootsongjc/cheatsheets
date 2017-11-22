@@ -23,25 +23,25 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='./assets/favicon.png' rel='shortcut icon'>
-<meta content='/git-revisions.html' name='app:pageurl'>
+<meta content='/jenkins.html' name='app:pageurl'>
 
 
-  <title>Git revisions cheatsheet</title>
-  <meta content='Git revisions cheatsheet' property='og:title'>
-  <meta content='Git revisions cheatsheet' property='twitter:title'>
+  <title>Jenkins cheatsheet</title>
+  <meta content='Jenkins cheatsheet' property='og:title'>
+  <meta content='Jenkins cheatsheet' property='twitter:title'>
   <meta content='article' property='og:type'>
 
 
 
 
 
-  <meta content=" A list of revision specifications you can use with git log and many other Git commands. Summarized from gitrevisions(7) man page." name="description">
-  <meta content=" A list of revision specifications you can use with git log and many other Git commands. Summarized from gitrevisions(7) man page." property="og:description">
-  <meta content=" A list of revision specifications you can use with git log and many other Git commands. Summarized from gitrevisions(7) man page." property="twitter:description">
+  <meta content="The one-page guide to Jenkins: usage, examples, links, snippets, and more." name="description">
+  <meta content="The one-page guide to Jenkins: usage, examples, links, snippets, and more." property="og:description">
+  <meta content="The one-page guide to Jenkins: usage, examples, links, snippets, and more." property="twitter:description">
 
 
-<link rel="canonical" href="https://jimmysong.io/cheatsheets/git-revisions">
-<meta name="og:url" content="https://jimmysong.io/cheatsheets/git-revisions">
+<link rel="canonical" href="https://jimmysong.io/cheatsheets/jenkins">
+<meta name="og:url" content="https://jimmysong.io/cheatsheets/jenkins">
 
 
 
@@ -57,7 +57,7 @@
 
 
 
-  <meta content='Git' property='article:section'>
+  <meta content='DevOps' property='article:section'>
 
 
 
@@ -111,9 +111,9 @@
     "@type": "WebPage",
     "@id": "https://google.com/article"
   },
-  "headline": "Git revisions cheatsheet",
+  "headline": "Jenkins cheatsheet",
   "image": [ null ],
-  "description": " A list of revision specifications you can use with git log and many other Git commands. Summarized from gitrevisions(7) man page."
+  "description": "The one-page guide to Jenkins: usage, examples, links, snippets, and more."
 }
 </script>
 <script type='application/ld+json'>
@@ -124,15 +124,15 @@
     "@type": "ListItem",
     "position": 1,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/#git",
-      "name": "Git"
+      "@id": "https://jimmysong.io/cheatsheets/#devops",
+      "name": "DevOps"
     }
   },{
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/git-revisions",
-      "name": "Git revisions"
+      "@id": "https://jimmysong.io/cheatsheets/jenkins",
+      "name": "Jenkins"
     }
   }]
 }
@@ -158,8 +158,8 @@
       <div class='actions'>
         
 <ul class="social-list social page-actions">
-  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/git-revisions.html" target="share"><span class="text"></span></a></li>
-  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Git%20revisions.%20https://jimmysong.io/cheatsheets/git-revisions.html" target="share"><span class="text"></span></a></li>
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/jenkins.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Jenkins.%20https://jimmysong.io/cheatsheets/jenkins.html" target="share"><span class="text"></span></a></li>
   
 </ul>
 
@@ -167,7 +167,7 @@
         
           <ul class='page-actions'>
             <li class='link github -button hint--bottom' data-hint='Edit this page on GitHub'>
-              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/git-revisions.md'>
+              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/jenkins.md'>
                 <span class='text -visible'>Edit</span>
               </a>
             </li>
@@ -181,7 +181,7 @@
 
 <div class='body-area'>
   <header class='main-heading -center' role='banner'>
-    <h1 class='h1'>Git revisions <em>cheatsheet</em></h1>
+    <h1 class='h1'>Jenkins <em>cheatsheet</em></h1>
   </header>
 
   
@@ -189,275 +189,28 @@
   
 
   
-    <div class='intro-content MarkdownBody'>
-      <p>A list of revision specifications you can use with <code>git log</code> and many other Git commands. Summarized from <code>gitrevisions(7)</code> man page.</p>
-
-    </div>
-  
 
   <main class='post-content MarkdownBody' data-js-main-body role='main'>
-    <h3 id="example-usages">Example usages</h3>
+    <h2 id="jenkins">Jenkins</h2>
 
-<table class="-mute-em">
-  <tbody>
-    <tr>
-      <td><em><code>git log</code></em> <code>master...develop</code></td>
-      <td>inspect differences in branches</td>
-    </tr>
-    <tr>
-      <td><em><code>git rebase -i</code></em> <code>HEAD~3</code></td>
-      <td>rebase last 3 commits</td>
-    </tr>
-    <tr>
-      <td><em><code>git reset --hard</code></em> <code>HEAD@{2}</code></td>
-      <td>undo last operation that changed HEAD</td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>v2^{}</code></td>
-      <td>checkout the <code>v2</code> tag (not <code>v2</code> branch)</td>
-    </tr>
-  </tbody>
-</table>
+<h2 id="on-mac">On Mac</h2>
 
-<p>The 3rd argument in each of these commands is a <code>gitrevision</code>. These gitrevisions can be passed to many Git commands.</p>
+<h3 id="basic">Basic</h3>
 
-<h3 id="common-git-revisions">Common git revisions</h3>
+<h4 id="stop-jenkins">Stop Jenkins</h4>
 
-<table class="-mute-em">
-  <thead>
-    <tr>
-      <th>Reference</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em><code>git show</code></em> <code>dae68e1</code></td>
-      <td>sha1</td>
-    </tr>
-    <tr>
-      <td><em><code>git show</code></em> <code>HEAD</code></td>
-      <td>reference</td>
-    </tr>
-    <tr>
-      <td><em><code>git show</code></em> <code>v1.0.0</code></td>
-      <td>tag</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><em><code>git show</code></em> <code>master</code></td>
-      <td>local branch</td>
-    </tr>
-    <tr>
-      <td><em><code>git show</code></em> <code>origin/master</code></td>
-      <td>remote branch</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><em><code>git show</code></em> <code>master~2</code></td>
-      <td>2 commits back from master</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><em><code>git show</code></em> <code>master..fix</code></td>
-      <td>reachable from <em>fix</em> but not <em>master</em></td>
-    </tr>
-    <tr>
-      <td><em><code>git show</code></em> <code>master...fix</code></td>
-      <td>reachable from <em>fix</em> and <em>master</em>, but not both</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>These are just the common ones, there’s a lot more below! (These work in many other commands, not just <code>git show</code>.)</p>
-
-<h2 id="reference">Reference</h2>
-
-<h3 id="commits">Commits</h3>
-
-<table class="-mute-em">
-  <tbody>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>dae68e1</code></td>
-      <td>sha1</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="references">References</h3>
-
-<table class="-mute-em">
-  <thead>
-    <tr>
-      <th>Example</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>HEAD</code></td>
-      <td>reference</td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>master</code></td>
-      <td>branch</td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>v1.0.0</code></td>
-      <td>tag</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>origin/master</code></td>
-      <td>aka, <em>refs/remotes/origin/master</em></td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>heads/master</code></td>
-      <td>aka, <em>refs/heads/master</em></td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="searching-back">Searching back</h3>
-
-<table class="-mute-em">
-  <thead>
-    <tr>
-      <th>Example</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>master@{yesterday}</code></td>
-      <td>also <em>1 day ago</em>, etc</td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>master@{2}</code></td>
-      <td>2nd prior value</td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>master@{push}</code></td>
-      <td>where <em>master</em> would push to</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>master^</code></td>
-      <td>parent commit</td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>master^2</code></td>
-      <td>2nd parent, eg, what it merged</td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>master~5</code></td>
-      <td>5 parents back</td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>master^0</code></td>
-      <td>this commit; disambiguates from tags</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>v0.99.8^{tag}</code></td>
-      <td>can be <em>commit</em>, <em>tag</em>, <em>tree</em>, <em>object</em></td>
-    </tr>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>v0.99.8^{}</code></td>
-      <td>defaults to <em>{tag}</em></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><em><code>git checkout</code></em> <code>":/fix bug"</code></td>
-      <td>searches commit messages</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="other">Other</h3>
-
-<table>
-  <tbody>
-    <tr>
-      <td><code>HEAD:README</code></td>
-      <td>…</td>
-    </tr>
-    <tr>
-      <td><code>0:README</code></td>
-      <td>(0 to 3) …</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="ranges">Ranges</h2>
-
-<h3 id="ranges-1">Ranges</h3>
-
-<table class="-mute-em">
-  <tbody>
-    <tr>
-      <td><em><code>git log</code></em> <code>master</code></td>
-      <td>reachable parents from master</td>
-    </tr>
-    <tr>
-      <td><em><code>git log</code></em> <code>^master</code></td>
-      <td>exclude reachable parents from master</td>
-    </tr>
-    <tr>
-      <td><em><code>git log</code></em> <code>master..fix</code></td>
-      <td>reachable from <em>fix</em> but not <em>master</em></td>
-    </tr>
-    <tr>
-      <td><em><code>git log</code></em> <code>master...fix</code></td>
-      <td>reachable from <em>fix</em> and <em>master</em>, but not both</td>
-    </tr>
-    <tr>
-      <td><em><code>git log</code></em> <code>HEAD^@</code></td>
-      <td>parents of <em>HEAD</em></td>
-    </tr>
-    <tr>
-      <td><em><code>git log</code></em> <code>HEAD^!</code></td>
-      <td><em>HEAD</em>, then excluding parents’s ancestors</td>
-    </tr>
-    <tr>
-      <td><em><code>git log</code></em> <code>HEAD^{:/fix}</code></td>
-      <td>search previous <em>HEAD</em>s matching criteria</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="ranges-illustration">Ranges illustration</h3>
-
-<pre class="-box-chars -setup"><code class="language-nohighlight">A ─┬─ E ── F ── G   master
-   │
-   └─ B ── C ── D   fix
+<pre><code class="language-bash">sudo launchctl unload /Library/LaunchDaemons/org.jenkins-ci.plist
 </code></pre>
 
-<table class="-mute-em">
-  <tbody>
-    <tr>
-      <td><em><code>git log</code></em> <code>master..fix</code></td>
-      <td>BCD</td>
-    </tr>
-    <tr>
-      <td><em><code>git log</code></em> <code>master...fix</code></td>
-      <td>BCD and EFG</td>
-    </tr>
-  </tbody>
-</table>
+<h4 id="start-jenkins">Start Jenkins</h4>
 
-<h2 id="references-1">References</h2>
+<pre><code class="language-bash">sudo launchctl load /Library/LaunchDaemons/org.jenkins-ci.plist
+</code></pre>
+
+<h2 id="see-also">See also</h2>
 
 <ul>
-  <li><a href="https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html">Git Tools - Revision Selection</a> <em>(git-scm.com)</em></li>
-  <li><a href="https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html">gitrevisions(7)</a> <em>(kernel.org)</em></li>
+  <li>See <a href="https://jenkins.io">https://jenkins.io</a></li>
 </ul>
 
   </main>
@@ -521,66 +274,10 @@
       <div class='group'>
         <div class='related-posts-group'>
           
-            <h3>Other Git cheatsheets</h3>
+            <h3>Other DevOps cheatsheets</h3>
           
 
           <ul class='related-post-list'>
-            
-              <li class='item related-post-item'>
-  <a href='./git-log-format'>
-    <strong>Git log format string</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./git-branch'>
-    <strong>Git branches</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./git-log'>
-    <strong>git log</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./git-tricks'>
-    <strong>Git tricks</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
             
           </ul>
         </div>
@@ -663,8 +360,8 @@
 
             
               <li class='item related-post-item'>
-  <a href='./go'>
-    <strong>Go</strong>
+  <a href='./go-tools'>
+    <strong>Go tools</strong>
     <span>
       cheatsheet
 

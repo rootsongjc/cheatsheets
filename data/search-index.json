@@ -341,6 +341,17 @@
   "tags": null,
   "updated": "2017-09-01"
 },{
+  "id": "jenkins",
+  "title": "Jenkins",
+  "url": "/jenkins",
+  "category": "DevOps",
+  "keywords": null,
+  "content_html": "<h2 id=\"jenkins\">Jenkins</h2>\n\n<h2 id=\"on-mac\">On Mac</h2>\n\n<h3 id=\"basic\">Basic</h3>\n\n<h4 id=\"stop-jenkins\">Stop Jenkins</h4>\n\n<pre><code class=\"language-bash\">sudo launchctl unload /Library/LaunchDaemons/org.jenkins-ci.plist\n</code></pre>\n\n<h4 id=\"start-jenkins\">Start Jenkins</h4>\n\n<pre><code class=\"language-bash\">sudo launchctl load /Library/LaunchDaemons/org.jenkins-ci.plist\n</code></pre>\n\n<h2 id=\"see-also\">See also</h2>\n\n<ul>\n  <li>See <a href=\"https://jenkins.io\">https://jenkins.io</a></li>\n</ul>",
+  "intro_html": "",
+  "description_html": "",
+  "tags": null,
+  "updated": null
+},{
   "id": "kramdown",
   "title": "Kramdown",
   "url": "/kramdown",
