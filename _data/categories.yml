@@ -2,7 +2,7 @@ enabled: true
 names:
   - Big Data
   - Cloud Native
-  - Devops
+  - DevOps
   - Docker
   - Git
   - Go
