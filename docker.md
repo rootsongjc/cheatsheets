@@ -4,124 +4,82 @@ category: Docker
 layout: 2017/sheet
 ---
 
-Manage images
+Docker
 -------------
 
-### `docker build`
+## Basic
 
-```yml
-docker build [options] .
-  -t "app/container_name"    # name
+### Build image
+
+```bash
+docker build -t registry/repo:tag .
 ```
 
 Create an `image` from a Dockerfile.
 
+### Push image
 
-### `docker run`
-
-```yml
-docker run [options] IMAGE
-  # see `docker create` for options
+```bash
+docker push -t reigstry/repo:tag
 ```
 
-Run a command in an `image`.
+### Run container
 
-Manage containers
+On daemon
+
+```bash
+docker run -d -p LOCAL_PORT:CONTAINER_PORT -v LOCAL_DIR:CONTAINER_DIR -e ENV=somthing registry/repo:tag
+```
+
+Containers
 -----------------
 
-### `docker create`
+### Interact with container
 
-```yml
-docker create [options] IMAGE
-  -a, --attach               # attach stdout/err
-  -i, --interactive          # attach stdin (interactive)
-  -t, --tty                  # pseudo-tty
-      --name NAME            # name your image
-  -p, --publish 5000:5000    # port map
-      --expose 5432          # expose a port to linked containers
-  -P, --publish-all          # publish all ports
-      --link container:alias # linking
-  -v, --volume `pwd`:/app    # mount (absolute paths needed)
-  -e, --env NAME=hello       # env vars
-```
-
-#### Example
-
-```
-$ docker create --name app_redis_1 \
-  --expose 6379 \
-  redis:3.0.2
-```
-
-Create a `container` from an `image`.
-
-### `docker exec`
-
-```yml
-docker exec [options] CONTAINER COMMAND
-  -d, --detach        # run in background
-  -i, --interactive   # stdin
-  -t, --tty           # interactive
-```
-
-#### Example
-
-```
-$ docker exec app_web_1 tail logs/development.log
-$ docker exec -t -i app_web_1 rails c
+```bash
+docker exec -it CONTAINER_NAME_OR_ID /bin/bash 
 ```
 
 Run commands in a `container`.
 
+### Automatically remove the container when it exits
 
-### `docker start`
-
-```yml
-docker start [options] CONTAINER
-  -a, --attach        # attach stdout/err
-  -i, --interactive   # attach stdin
-
-docker stop [options] CONTAINER
+```bash
+docker run -rm -it registry/repo:tag /bin/bash
 ```
-
-Start/stop a `container`.
-
-
-### `docker ps`
-
-```
-$ docker ps
-$ docker ps -a
-$ docker kill $ID
-```
-
-Manage `container`s using ps/kill.
 
 Images
 ------
 
-### `docker images`
+### Manage images
 
-```sh
+```bash
 $ docker images
   REPOSITORY   TAG        ID
   ubuntu       12.10      b750fe78269d
   me/myapp     latest     7b2431a8d968
 ```
 
-```sh
+```bash
 $ docker images -a   # also show intermediate
 ```
 
 Manages `image`s.
 
-### `docker rmi`
+### Remove container
 
-```yml
-docker rmi b750fe78269d
+```bash
+docker rmi CONTAINER_ID_OR_NAME
 ```
 
 Deletes `image`s.
+
+### Export and import image
+
+```bash
+docker save imagename > imagename.tar
+docker load -i imagename.tar
+```
 
 Also see
 --------
