@@ -96,11 +96,11 @@
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20171123113119'
+'./assets/2017/style.css?t=20171124113306'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20171123113119'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20171124113306'>
 </noscript>
 
 <script type='application/ld+json'>
@@ -191,107 +191,70 @@
   
 
   <main class='post-content MarkdownBody' data-js-main-body role='main'>
-    <h2 id="manage-images">Manage images</h2>
+    <h2 id="docker">Docker</h2>
 
-<h3 id="docker-build"><code>docker build</code></h3>
+<h2 id="basic">Basic</h2>
 
-<pre><code class="language-yml">docker build [options] .
-  -t "app/container_name"    # name
+<h3 id="build-image">Build image</h3>
+
+<pre><code class="language-bash">docker build -t registry/repo:tag .
 </code></pre>
 
 <p>Create an <code>image</code> from a Dockerfile.</p>
 
-<h3 id="docker-run"><code>docker run</code></h3>
+<h3 id="push-image">Push image</h3>
 
-<pre><code class="language-yml">docker run [options] IMAGE
-  # see `docker create` for options
+<pre><code class="language-bash">docker push -t reigstry/repo:tag
 </code></pre>
 
-<p>Run a command in an <code>image</code>.</p>
+<h3 id="run-container">Run container</h3>
 
-<h2 id="manage-containers">Manage containers</h2>
+<p>On daemon</p>
 
-<h3 id="docker-create"><code>docker create</code></h3>
-
-<pre><code class="language-yml">docker create [options] IMAGE
-  -a, --attach               # attach stdout/err
-  -i, --interactive          # attach stdin (interactive)
-  -t, --tty                  # pseudo-tty
-      --name NAME            # name your image
-  -p, --publish 5000:5000    # port map
-      --expose 5432          # expose a port to linked containers
-  -P, --publish-all          # publish all ports
-      --link container:alias # linking
-  -v, --volume `pwd`:/app    # mount (absolute paths needed)
-  -e, --env NAME=hello       # env vars
+<pre><code class="language-bash">docker run -d -p LOCAL_PORT:CONTAINER_PORT -v LOCAL_DIR:CONTAINER_DIR -e ENV=somthing registry/repo:tag
 </code></pre>
 
-<h4 id="example">Example</h4>
+<h2 id="containers">Containers</h2>
 
-<pre><code>$ docker create --name app_redis_1 \
-  --expose 6379 \
-  redis:3.0.2
-</code></pre>
+<h3 id="interact-with-container">Interact with container</h3>
 
-<p>Create a <code>container</code> from an <code>image</code>.</p>
-
-<h3 id="docker-exec"><code>docker exec</code></h3>
-
-<pre><code class="language-yml">docker exec [options] CONTAINER COMMAND
-  -d, --detach        # run in background
-  -i, --interactive   # stdin
-  -t, --tty           # interactive
-</code></pre>
-
-<h4 id="example-1">Example</h4>
-
-<pre><code>$ docker exec app_web_1 tail logs/development.log
-$ docker exec -t -i app_web_1 rails c
+<pre><code class="language-bash">docker exec -it CONTAINER_NAME_OR_ID /bin/bash 
 </code></pre>
 
 <p>Run commands in a <code>container</code>.</p>
 
-<h3 id="docker-start"><code>docker start</code></h3>
+<h3 id="automatically-remove-the-container-when-it-exits">Automatically remove the container when it exits</h3>
 
-<pre><code class="language-yml">docker start [options] CONTAINER
-  -a, --attach        # attach stdout/err
-  -i, --interactive   # attach stdin
-
-docker stop [options] CONTAINER
+<pre><code class="language-bash">docker run -rm -it registry/repo:tag /bin/bash
 </code></pre>
-
-<p>Start/stop a <code>container</code>.</p>
-
-<h3 id="docker-ps"><code>docker ps</code></h3>
-
-<pre><code>$ docker ps
-$ docker ps -a
-$ docker kill $ID
-</code></pre>
-
-<p>Manage <code>container</code>s using ps/kill.</p>
 
 <h2 id="images">Images</h2>
 
-<h3 id="docker-images"><code>docker images</code></h3>
+<h3 id="manage-images">Manage images</h3>
 
-<pre><code class="language-sh">$ docker images
+<pre><code class="language-bash">$ docker images
   REPOSITORY   TAG        ID
   ubuntu       12.10      b750fe78269d
   me/myapp     latest     7b2431a8d968
 </code></pre>
 
-<pre><code class="language-sh">$ docker images -a   # also show intermediate
+<pre><code class="language-bash">$ docker images -a   # also show intermediate
 </code></pre>
 
 <p>Manages <code>image</code>s.</p>
 
-<h3 id="docker-rmi"><code>docker rmi</code></h3>
+<h3 id="remove-container">Remove container</h3>
 
-<pre><code class="language-yml">docker rmi b750fe78269d
+<pre><code class="language-bash">docker rmi CONTAINER_ID_OR_NAME
 </code></pre>
 
 <p>Deletes <code>image</code>s.</p>
+
+<h3 id="export-and-import-image">Export and import image</h3>
+
+<pre><code class="language-bash">docker save imagename &gt; imagename.tar
+docker load -i imagename.tar
+</code></pre>
 
 <h2 id="also-see">Also see</h2>
 
@@ -322,7 +285,7 @@ $ docker kill $ID
       
         
         
-        placeholder='Search 56+ cheatsheets'
+        placeholder='Search 55+ cheatsheets'
       >
   </label>
 </form>
@@ -347,7 +310,7 @@ $ docker kill $ID
             <i class='icon'></i>
 
             <span class='description'>
-              Over 56 curated cheatsheets, by developers for developers.
+              Over 55 curated cheatsheets, by developers for developers.
             </span>
 
             <span class='push-button -dark'>
@@ -460,8 +423,8 @@ $ docker kill $ID
 
             
               <li class='item related-post-item'>
-  <a href='./html-meta'>
-    <strong>HTML meta tags</strong>
+  <a href='./html-input'>
+    <strong>Input tag</strong>
     <span>
       cheatsheet
 
@@ -488,8 +451,8 @@ $ docker kill $ID
 
             
               <li class='item related-post-item'>
-  <a href='./kubernetes-kubectl'>
-    <strong>kubectl</strong>
+  <a href='./go-tools'>
+    <strong>Go tools</strong>
     <span>
       cheatsheet
 
@@ -960,8 +923,8 @@ module.exports = on
 
 /***/ })
 /******/ ]);</script>
-<script src='./assets/packed/vendor.js?t=20171123113119'></script>
-<script src='./assets/packed/app.js?t=20171123113119'></script>
+<script src='./assets/packed/vendor.js?t=20171124113306'></script>
+<script src='./assets/packed/app.js?t=20171124113306'></script>
 
 
 
