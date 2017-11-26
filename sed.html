@@ -35,9 +35,9 @@
 
 
 
-  <meta content="One-page guide to sed: usage, examples, and more. Here’s home hints on using sed." name="description">
-  <meta content="One-page guide to sed: usage, examples, and more. Here’s home hints on using sed." property="og:description">
-  <meta content="One-page guide to sed: usage, examples, and more. Here’s home hints on using sed." property="twitter:description">
+  <meta content="One-page guide to sed: usage, examples, and more. sed命令行格式为：sed [-nefri] ‘command’ 输入文本" name="description">
+  <meta content="One-page guide to sed: usage, examples, and more. sed命令行格式为：sed [-nefri] ‘command’ 输入文本" property="og:description">
+  <meta content="One-page guide to sed: usage, examples, and more. sed命令行格式为：sed [-nefri] ‘command’ 输入文本" property="twitter:description">
 
 
 <link rel="canonical" href="https://jimmysong.io/cheatsheets/sed">
@@ -96,11 +96,11 @@
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20171125120341'
+'./assets/2017/style.css?t=20171126112126'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20171125120341'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20171126112126'>
 </noscript>
 
 <script type='application/ld+json'>
@@ -113,7 +113,7 @@
   },
   "headline": "sed cheatsheet",
   "image": [ null ],
-  "description": "One-page guide to sed: usage, examples, and more. Here’s home hints on using sed."
+  "description": "One-page guide to sed: usage, examples, and more. sed命令行格式为：sed [-nefri] ‘command’ 输入文本"
 }
 </script>
 <script type='application/ld+json'>
@@ -190,40 +190,135 @@
 
   
     <div class='intro-content MarkdownBody'>
-      <p>Here’s home hints on using sed.</p>
+      <p>sed命令行格式为：sed [-nefri] ‘command’ 输入文本</p>
 
     </div>
   
 
   <main class='post-content MarkdownBody' data-js-main-body role='main'>
-    <h3 id="in-place-replacements">In place replacements</h3>
+    <h2 id="sed">Sed</h2>
 
-<h4 id="in-gnu-sed-use--i-without-arg">In GNU sed: use <code>-i</code> without arg.</h4>
+<h3 id="常用选项">常用选项</h3>
 
-<pre><code class="language-bash">sed -i -e 's/foo/bar/' example.md
+<p>命令行参数</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>用法</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-n</td>
+      <td>使用安静(silent)模式。在一般 sed 的用法中，所有来自 STDIN的资料一般都会被列出到屏幕上。但如果加上 -n 参数后，则只有经过 sed 特殊处理的那一行(或者动作)才会被列出来。</td>
+    </tr>
+    <tr>
+      <td>-e</td>
+      <td>直接在指令列模式上进行 sed 的动作编辑；</td>
+    </tr>
+    <tr>
+      <td>-f</td>
+      <td>执行 -f filename 文件内的 sed 命令</td>
+    </tr>
+    <tr>
+      <td>-r</td>
+      <td>sed 的扩展正规表示法的语法。(预设是基础正规表示法语法)</td>
+    </tr>
+    <tr>
+      <td>-i</td>
+      <td>直接修改读取文件内容，而不是输出到屏幕上</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="命令字解析">命令字解析</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>命令字</th>
+      <th>用法</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>a</td>
+      <td>新增， a 的后面可以接字串，而这些字串会在新的一行出现(目前的下一行)</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>取代， c 的后面可以接字串，这些字串可以取代 n1,n2 之间的行</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>删除，因为是删除，所以 d 后面通常不接任何东西；</td>
+    </tr>
+    <tr>
+      <td>i</td>
+      <td>插入， i 的后面可以接字串，而这些字串会在新的一行出现(目前的上一行)；</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>列印，亦即将某个选择的资料印出。通常 p 会与参数 sed -n 一起运作</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>替换，替换输入中的内容，通常这个 s 的动作可以搭配正规。例如 1,20s/old/new/g</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="示例">示例</h2>
+
+<h3 id="显示某行">显示某行</h3>
+
+<pre><code class="language-bash">[root@localhost ruby] # sed -n '1p' ab           #显示第一行 
+[root@localhost ruby] # sed -n '$p' ab           #显示最后一行
+[root@localhost ruby] # sed -n '1,2p' ab        #显示第一行到第二行
+[root@localhost ruby] # sed -n '2,$p' ab        #显示第二行到最后一行
 </code></pre>
 
-<h4 id="in-osx--i--is-required">In OSX, <code>-i ''</code> is required.</h4>
+<h3 id="使用模式进行查询">使用模式进行查询</h3>
 
-<pre><code class="language-bash">sed -i '' -e 's/foo/bar/' example.md
+<pre><code class="language-bash">[root@localhost ruby] # sed -n '/ruby/p' ab    #查询包括关键字ruby所在所有行
+[root@localhost ruby] # sed -n '/$/p' ab        #查询包括关键字$所在所有行，使用反斜线\屏蔽特殊含义
 </code></pre>
 
-<h3 id="file-regions">File regions</h3>
+<h3 id="替换">替换</h3>
 
-<h4 id="print-until-a-certain-line-is-met">Print until a certain line is met</h4>
+<p>替换一行或者多行</p>
 
-<pre><code class="language-bash">sed '/begin api/q'
+<pre><code class="language-bash">[root@localhost ruby] # sed '1c Hi' ab                #第一行代替为Hi
+Hi
+ruby is me,welcome to my blog.
+end
+[root@localhost ruby] # sed '1,2c Hi' ab             #第一行到第二行代替为Hi
+Hi
+end
 </code></pre>
 
-<h4 id="print-until-a-certain-line-is-met-but-not-that-line">Print until a certain line is met, but not that line</h4>
+<h3 id="替换一行中的某部分">替换一行中的某部分</h3>
 
-<pre><code class="language-bash">sed '/^# begin/,$d'
+<p>格式：sed ‘s/要替换的字符串/新的字符串/g’   （要替换的字符串可以用正则表达式）</p>
+
+<pre><code class="language-bash">[root@localhost ruby] # sed -n '/ruby/p' ab | sed 's/ruby/bird/g'    #替换ruby为bird
+[root@localhost ruby] # sed -n '/ruby/p' ab | sed 's/ruby//g'        #删除ruby
 </code></pre>
 
-<h4 id="print-everything-after-a-given-line">Print everything after a given line</h4>
+<h3 id="插入">插入</h3>
 
-<pre><code class="language-bash">sed -n '/end api/,$p'
+<p>在文件ab中最后一行直接输入”bye”</p>
+
+<pre><code class="language-bash">[root@localhost ruby] # sed -i '$a bye' ab         
+[root@localhost ruby]# cat ab
+Hello!
+ruby is me,welcome to my blog.
+end
+bye
 </code></pre>
+
 
   </main>
 </div>
@@ -928,8 +1023,8 @@ module.exports = on
 
 /***/ })
 /******/ ]);</script>
-<script src='./assets/packed/vendor.js?t=20171125120341'></script>
-<script src='./assets/packed/app.js?t=20171125120341'></script>
+<script src='./assets/packed/vendor.js?t=20171126112126'></script>
+<script src='./assets/packed/app.js?t=20171126112126'></script>
 
 
 
