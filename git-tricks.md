@@ -161,3 +161,16 @@ git log --grep="fixes things"  # search in commit messages
 git log -S"window.alert"       # search in code
 git log -G"foo.*"              # search in code (regex)
 ```
+
+### Sync upstream
+
+```bash
+# see local branch
+git remote -v
+# add remote branch
+git remote add upstream https://github.com/k8smeetup/kubernetes.github.io.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+```
+
