@@ -1,6 +1,6 @@
 ---
 title: Git tricks
-category: Git
+category: DevOps
 layout: 2017/sheet
 prism_languages: [go, bash]
 ---
@@ -174,3 +174,8 @@ git checkout master
 git merge upstream/master
 ```
 
+### Discard file changes
+
+```bash
+git checkout -- <badfile>
+```
