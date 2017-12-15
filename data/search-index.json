@@ -82,11 +82,11 @@
   "url": "/docker-operations",
   "category": "Docker",
   "keywords": null,
-  "content_html": "<h2 id=\"docker-operations\">Docker operations</h2>\n\n<h2 id=\"docker-for-mac\">Docker for Mac</h2>\n\n<h3 id=\"delete-all-images-and-containers\">Delete all images and containers</h3>\n\n<pre><code class=\"language-bash\">docker rm $(docker ps -a -q)\ndocker rmi $(docker images -q)\ndocker volume rm $(docker volume ls |awk '{print $2}')\nrm -rf ~/Library/Containers/com.docker.docker/Data/*\n</code></pre>\n\n<p>Restart docker after that.</p>\n\n<h2 id=\"reference\">Reference</h2>\n\n<ul>\n  <li><a href=\"https://github.com/docker/for-mac/issues/371\">Docker.qcow2 never shrinks - disk space usage leak in docker for mac #371</a></li>\n</ul>",
+  "content_html": "<h2 id=\"docker-operations\">Docker operations</h2>\n\n<h2 id=\"docker-for-mac\">Docker for Mac</h2>\n\n<h3 id=\"delete-all-images-and-containers\">Delete all images and containers</h3>\n\n<pre><code class=\"language-bash\">docker rm $(docker ps -a -q)\ndocker rmi $(docker images -q)\ndocker volume rm $(docker volume ls |awk '{print $2}')\nrm -rf ~/Library/Containers/com.docker.docker/Data/*\n</code></pre>\n\n<p>Restart docker after that.</p>\n\n<h2 id=\"network\">Network</h2>\n\n<h3 id=\"delete-docker0-bridge-network\">Delete docker0 bridge network</h3>\n\n<pre><code class=\"language-bash\">ifconfig docker0 down\nbrctl delbr docker0\n</code></pre>\n\n<p>The next time you start docker daemon, this network will be recreated.</p>\n\n<h2 id=\"reference\">Reference</h2>\n\n<ul>\n  <li><a href=\"https://github.com/docker/for-mac/issues/371\">Docker.qcow2 never shrinks - disk space usage leak in docker for mac #371</a></li>\n</ul>",
   "intro_html": "",
   "description_html": "",
   "tags": null,
-  "updated": "2017-11-20"
+  "updated": "2017-12-15"
 },{
   "id": "docker",
   "title": "Docker CLI",
