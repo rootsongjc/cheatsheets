@@ -3,7 +3,7 @@ title: Docker operations
 category: Docker
 layout: 2017/sheet
 prism_languages: [bash]
-updated: 2017-11-20
+updated: 2017-12-15
 ---
 ## Docker operations
 
@@ -19,6 +19,17 @@ rm -rf ~/Library/Containers/com.docker.docker/Data/*
 ```
 
 Restart docker after that.
+
+## Network
+
+### Delete docker0 bridge network
+
+```bash
+ifconfig docker0 down
+brctl delbr docker0
+```
+
+The next time you start docker daemon, this network will be recreated.
 
 ## Reference
 
