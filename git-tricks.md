@@ -3,11 +3,22 @@ title: Git tricks
 category: DevOps
 layout: 2017/sheet
 prism_languages: [go, bash]
+updated: 2017-12-19
 ---
 
 ## Basic
 
 {:.-three-column}
+
+### Commit
+
+```bash
+git commit -m "message"
+# change the message of the last commit
+git commit --amend
+```
+
+See <https://segmentfault.com/q/1010000000761908>
 
 ### Refs
 
