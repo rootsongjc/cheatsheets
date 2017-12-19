@@ -23,25 +23,25 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='./assets/favicon.png' rel='shortcut icon'>
-<meta content='/dockerfile.html' name='app:pageurl'>
+<meta content='/networking.html' name='app:pageurl'>
 
 
-  <title>Dockerfile cheatsheet</title>
-  <meta content='Dockerfile cheatsheet' property='og:title'>
-  <meta content='Dockerfile cheatsheet' property='twitter:title'>
+  <title>Networking cheatsheet</title>
+  <meta content='Networking cheatsheet' property='og:title'>
+  <meta content='Networking cheatsheet' property='twitter:title'>
   <meta content='article' property='og:type'>
 
 
 
 
 
-  <meta content="The one-page guide to Dockerfile: usage, examples, links, snippets, and more." name="description">
-  <meta content="The one-page guide to Dockerfile: usage, examples, links, snippets, and more." property="og:description">
-  <meta content="The one-page guide to Dockerfile: usage, examples, links, snippets, and more." property="twitter:description">
+  <meta content="The one-page guide to Networking: usage, examples, links, snippets, and more." name="description">
+  <meta content="The one-page guide to Networking: usage, examples, links, snippets, and more." property="og:description">
+  <meta content="The one-page guide to Networking: usage, examples, links, snippets, and more." property="twitter:description">
 
 
-<link rel="canonical" href="https://jimmysong.io/cheatsheets/dockerfile">
-<meta name="og:url" content="https://jimmysong.io/cheatsheets/dockerfile">
+<link rel="canonical" href="https://jimmysong.io/cheatsheets/networking">
+<meta name="og:url" content="https://jimmysong.io/cheatsheets/networking">
 
 
 
@@ -57,7 +57,7 @@
 
 
 
-  <meta content='Docker' property='article:section'>
+  <meta content='Linux' property='article:section'>
 
 
 
@@ -111,9 +111,9 @@
     "@type": "WebPage",
     "@id": "https://google.com/article"
   },
-  "headline": "Dockerfile cheatsheet",
+  "headline": "Networking cheatsheet",
   "image": [ null ],
-  "description": "The one-page guide to Dockerfile: usage, examples, links, snippets, and more."
+  "description": "The one-page guide to Networking: usage, examples, links, snippets, and more."
 }
 </script>
 <script type='application/ld+json'>
@@ -124,15 +124,15 @@
     "@type": "ListItem",
     "position": 1,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/#docker",
-      "name": "Docker"
+      "@id": "https://jimmysong.io/cheatsheets/#linux",
+      "name": "Linux"
     }
   },{
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://jimmysong.io/cheatsheets/dockerfile",
-      "name": "Dockerfile"
+      "@id": "https://jimmysong.io/cheatsheets/networking",
+      "name": "Networking"
     }
   }]
 }
@@ -158,8 +158,8 @@
       <div class='actions'>
         
 <ul class="social-list social page-actions">
-  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/dockerfile.html" target="share"><span class="text"></span></a></li>
-  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Dockerfile.%20https://jimmysong.io/cheatsheets/dockerfile.html" target="share"><span class="text"></span></a></li>
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://jimmysong.io/cheatsheets/networking.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20Networking.%20https://jimmysong.io/cheatsheets/networking.html" target="share"><span class="text"></span></a></li>
   
 </ul>
 
@@ -167,7 +167,7 @@
         
           <ul class='page-actions'>
             <li class='link github -button hint--bottom' data-hint='Edit this page on GitHub'>
-              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/dockerfile.md'>
+              <a href='http://github.com/rootsongjc/cheatsheets/blob/master/networking.md'>
                 <span class='text -visible'>Edit</span>
               </a>
             </li>
@@ -181,7 +181,7 @@
 
 <div class='body-area'>
   <header class='main-heading -center' role='banner'>
-    <h1 class='h1'>Dockerfile <em>cheatsheet</em></h1>
+    <h1 class='h1'>Networking <em>cheatsheet</em></h1>
   </header>
 
   
@@ -191,44 +191,56 @@
   
 
   <main class='post-content MarkdownBody' data-js-main-body role='main'>
-    <h2 class="-three-column" id="reference">Reference</h2>
+    <h2 id="networking">Networking</h2>
 
-<h3 id="inheritance">Inheritance</h3>
+<h2 id="route">route</h2>
 
-<pre><code>FROM ruby:2.2.2
+<h3 id="view-route">View route</h3>
+
+<p>View the route tables.</p>
+
+<pre><code class="language-bash">route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         172.30.3.1      0.0.0.0         UG    0      0        0 eth0
+10.2.3.0        172.30.3.143    255.255.255.0   UG    0      0        0 eth0
+10.2.9.0        172.30.3.158    255.255.255.0   UG    0      0        0 eth0
+10.2.52.0       172.30.3.38     255.255.255.0   UG    0      0        0 eth0
+169.254.0.0     0.0.0.0         255.255.0.0     U     1002   0        0 eth0
+172.30.3.0      0.0.0.0         255.255.255.0   U     0      0        0 eth0
 </code></pre>
 
-<h3 id="variables">Variables</h3>
+<h3 id="delete-route">Delete route</h3>
 
-<pre><code>ENV APP_HOME /myapp
-RUN mkdir $APP_HOME
+<p>Delete a route form networking.</p>
+
+<pre><code class="language-bash">route del -net 10.2.3.0 netmask 255.255.255.0
 </code></pre>
 
-<h3 id="initialization">Initialization</h3>
+<h2 id="iptables">iptables</h2>
 
-<pre><code>RUN bundle install
+<h3 id="view">View</h3>
+
+<pre><code class="language-bash">iptables -L
 </code></pre>
 
-<pre><code>WORKDIR /myapp
+<h3 id="flush">Flush</h3>
+
+<pre><code class="language-bash">iptables -F
 </code></pre>
 
-<h3 id="onbuild">Onbuild</h3>
+<h2 id="ifconfig">ifconfig</h2>
 
-<pre><code class="language-bash">ONBUILD RUN bundle install
-# when used with another file
+<h3 id="turn-down-an-interface">Turn down an interface</h3>
+
+<pre><code class="language-bash">ifconfig docker0 down
 </code></pre>
 
-<h3 id="commands">Commands</h3>
+<h3 id="delete-a-bridge">Delete a bridge</h3>
 
-<pre><code class="language-docker">EXPOSE 5900
-CMD    ["bundle", "exec", "rails", "server"]
+<pre><code class="language-bash">brctl delbr docker0
 </code></pre>
 
-<h2 class="-one-column" id="see-also">See also</h2>
-
-<ul>
-  <li><a href="https://docs.docker.com/engine/reference/builder/">https://docs.docker.com/engine/reference/builder/</a></li>
-</ul>
 
   </main>
 </div>
@@ -291,108 +303,14 @@ CMD    ["bundle", "exec", "rails", "server"]
       <div class='group'>
         <div class='related-posts-group'>
           
-            <h3>Other Docker cheatsheets</h3>
+            <h3>Other Linux cheatsheets</h3>
           
-
-          <ul class='related-post-list'>
-            
-              <li class='item related-post-item'>
-  <a href='./docker-compose'>
-    <strong>docker-compose</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./docker-operations'>
-    <strong>Docker operations</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./docker'>
-    <strong>Docker CLI</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-          </ul>
-        </div>
-      </div>
-
-      <div class='group'>
-        <div class='related-posts-group'>
-          <h3>Top cheatsheets</h3>
 
           <ul class='related-post-list'>
             
               <li class='item related-post-item'>
   <a href='./vim'>
     <strong>Vim</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./react'>
-    <strong>React.js</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./xpath'>
-    <strong>Xpath</strong>
-    <span>
-      cheatsheet
-
-      
-      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
-      
-    </span>
-  </a>
-</li>
-
-            
-              <li class='item related-post-item'>
-  <a href='./go'>
-    <strong>Go</strong>
     <span>
       cheatsheet
 
@@ -419,8 +337,144 @@ CMD    ["bundle", "exec", "rails", "server"]
 
             
               <li class='item related-post-item'>
-  <a href='./html-input'>
-    <strong>Input tag</strong>
+  <a href='./bash'>
+    <strong>Bash scripting</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./curl'>
+    <strong>Curl</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./fd'>
+    <strong>fd</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./sed'>
+    <strong>sed</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class='group'>
+        <div class='related-posts-group'>
+          <h3>Top cheatsheets</h3>
+
+          <ul class='related-post-list'>
+            
+              <li class='item related-post-item'>
+  <a href='./react'>
+    <strong>React.js</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./vim'>
+    <strong>Vim</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./xpath'>
+    <strong>Xpath</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./kubernetes-tricks'>
+    <strong>Kubernetes tricks</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./go'>
+    <strong>Go</strong>
+    <span>
+      cheatsheet
+
+      
+      <abbr class='attribute-peg -new-layout hint--bottom' data-hint='New layout!'><span></span></abbr>
+      
+    </span>
+  </a>
+</li>
+
+            
+              <li class='item related-post-item'>
+  <a href='./prometheus'>
+    <strong>Prometheus</strong>
     <span>
       cheatsheet
 
@@ -893,7 +947,7 @@ module.exports = on
 /******/ ]);</script>
 <script src='./assets/packed/vendor.js?t=20171219115757'></script>
 <script src='./assets/packed/app.js?t=20171219115757'></script>
-
+<script src='https://cdn.jsdelivr.net/npm/prismjs@1.6.0/components/prism-bash.min.js'></script>
 
 
 </body>

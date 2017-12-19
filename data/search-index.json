@@ -363,6 +363,17 @@
   "tags": null,
   "updated": null
 },{
+  "id": "networking",
+  "title": "Networking",
+  "url": "/networking",
+  "category": "Linux",
+  "keywords": null,
+  "content_html": "<h2 id=\"networking\">Networking</h2>\n\n<h2 id=\"route\">route</h2>\n\n<h3 id=\"view-route\">View route</h3>\n\n<p>View the route tables.</p>\n\n<pre><code class=\"language-bash\">route -n\nKernel IP routing table\nDestination     Gateway         Genmask         Flags Metric Ref    Use Iface\n0.0.0.0         172.30.3.1      0.0.0.0         UG    0      0        0 eth0\n10.2.3.0        172.30.3.143    255.255.255.0   UG    0      0        0 eth0\n10.2.9.0        172.30.3.158    255.255.255.0   UG    0      0        0 eth0\n10.2.52.0       172.30.3.38     255.255.255.0   UG    0      0        0 eth0\n169.254.0.0     0.0.0.0         255.255.0.0     U     1002   0        0 eth0\n172.30.3.0      0.0.0.0         255.255.255.0   U     0      0        0 eth0\n</code></pre>\n\n<h3 id=\"delete-route\">Delete route</h3>\n\n<p>Delete a route form networking.</p>\n\n<pre><code class=\"language-bash\">route del -net 10.2.3.0 netmask 255.255.255.0\n</code></pre>\n\n<h2 id=\"iptables\">iptables</h2>\n\n<h3 id=\"view\">View</h3>\n\n<pre><code class=\"language-bash\">iptables -L\n</code></pre>\n\n<h3 id=\"flush\">Flush</h3>\n\n<pre><code class=\"language-bash\">iptables -F\n</code></pre>\n\n<h2 id=\"ifconfig\">ifconfig</h2>\n\n<h3 id=\"turn-down-an-interface\">Turn down an interface</h3>\n\n<pre><code class=\"language-bash\">ifconfig docker0 down\n</code></pre>\n\n<h3 id=\"delete-a-bridge\">Delete a bridge</h3>\n\n<pre><code class=\"language-bash\">brctl delbr docker0\n</code></pre>",
+  "intro_html": "",
+  "description_html": "",
+  "tags": null,
+  "updated": "2017-12-19"
+},{
   "id": "nginx",
   "title": "nginx",
   "url": "/nginx",
