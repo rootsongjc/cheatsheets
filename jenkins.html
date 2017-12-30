@@ -96,11 +96,11 @@
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20171225171238'
+'./assets/2017/style.css?t=20171230094602'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20171225171238'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20171230094602'>
 </noscript>
 
 <script type='application/ld+json'>
@@ -213,6 +213,17 @@
 </code></pre>
 
 <p>Download the latest <code>jenkins.war</code> and move it to the Jenkins installation folder.</p>
+
+<h2 id="docker">Docker</h2>
+
+<h4 id="start-jenkins-1">Start Jenkins</h4>
+
+<pre><code class="language-bash">docker run -d -p 8080:8080 -p 5000:5000 --name jenkins -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+</code></pre>
+
+<p>Admin’s password location at <code>/var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword</code>.</p>
+
+<p>For more information, see https://github.com/jenkinsci/docker/blob/master/README.md</p>
 
 <h2 id="see-also">See also</h2>
 
@@ -853,8 +864,8 @@ module.exports = on
 
 /***/ })
 /******/ ]);</script>
-<script src='./assets/packed/vendor.js?t=20171225171238'></script>
-<script src='./assets/packed/app.js?t=20171225171238'></script>
+<script src='./assets/packed/vendor.js?t=20171230094602'></script>
+<script src='./assets/packed/app.js?t=20171230094602'></script>
 
 
 
