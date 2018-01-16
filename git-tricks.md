@@ -58,6 +58,9 @@ HEAD~5      # 5 commits before head
 # Squash multiple commits into one for a cleaner git log
 # (on the following screen change the word pick to either 'f' or 's')
   git rebase -i $commit_ref
+  
+# Force update upstream
+  git push -f origin master
 ```
 
 ### Submodules
