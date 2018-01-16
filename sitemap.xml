@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://jimmysong.io/cheatsheets/</loc></url>
+<url><loc>https://jimmysong.io/cheatsheets/Linux</loc></url>
 <url><loc>https://jimmysong.io/cheatsheets/bash</loc></url>
 <url><loc>https://jimmysong.io/cheatsheets/bootstrap</loc></url>
 <url><loc>https://jimmysong.io/cheatsheets/deprecated/bower-api</loc></url>
@@ -49,7 +50,6 @@
 <url><loc>https://jimmysong.io/cheatsheets/webpack</loc></url>
 <url><loc>https://jimmysong.io/cheatsheets/xpath</loc></url>
 <url><loc>https://jimmysong.io/cheatsheets/yaml</loc></url>
-<url><loc>https://jimmysong.io/cheatsheets/zsh</loc></url>
 
 </urlset>
 
