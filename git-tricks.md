@@ -3,7 +3,7 @@ title: Git tricks
 category: DevOps
 layout: 2017/sheet
 prism_languages: [go, bash]
-updated: 2017-12-19
+updated: 2018-01-31
 ---
 
 ## Basic
@@ -193,3 +193,15 @@ git merge upstream/master
 ```bash
 git checkout -- <badfile>
 ```
+### Mirroring a repository
+
+```bash
+# create a bare clone of the repository
+git clone --bare https://github.com/exampleuser/old-repository.git
+# mirror-push to the new repository
+git push --miror https://github.com/exampleuser/new-repository.git
+# remove the temporary local repository
+cd ..
+rm -rf old-repository
+```
+
