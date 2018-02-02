@@ -205,3 +205,10 @@ cd ..
 rm -rf old-repository
 ```
 
+### No-password git push
+
+```bash
+vim .git-credentials
+https://{username}:{password}@github.com
+git config --global credential.helper store
+```
