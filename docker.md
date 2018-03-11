@@ -31,6 +31,20 @@ On daemon
 docker run -d -p LOCAL_PORT:CONTAINER_PORT -v LOCAL_DIR:CONTAINER_DIR -e ENV=somthing registry/repo:tag
 ```
 
+### Auto completion
+
+Add docker plugin to `~/.oh-my-zsh/plugins/docker/_docker` and check `~/.zshrc`
+
+```bash
+plugins=(git 
+docker
+)
+fpath+=($ZSH/plugins/docker)
+autoload -U compinit && compinit
+```
+
+See [stackoverflow](https://stackoverflow.com/questions/37428133/zsh-docker-plugin-not-working) and [docker docs](https://docs.docker.com/compose/completion/#zsh)
+
 Containers
 -----------------
 
