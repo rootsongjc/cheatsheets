@@ -96,11 +96,11 @@
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20180202193309'
+'./assets/2017/style.css?t=20180311102517'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20180202193309'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20180311102517'>
 </noscript>
 
 <script type='application/ld+json'>
@@ -213,6 +213,19 @@
 
 <pre><code class="language-bash">docker run -d -p LOCAL_PORT:CONTAINER_PORT -v LOCAL_DIR:CONTAINER_DIR -e ENV=somthing registry/repo:tag
 </code></pre>
+
+<h3 id="auto-completion">Auto completion</h3>
+
+<p>Add docker plugin to <code>~/.oh-my-zsh/plugins/docker/_docker</code> and check <code>~/.zshrc</code></p>
+
+<pre><code class="language-bash">plugins=(git 
+docker
+)
+fpath+=($ZSH/plugins/docker)
+autoload -U compinit &amp;&amp; compinit
+</code></pre>
+
+<p>See <a href="https://stackoverflow.com/questions/37428133/zsh-docker-plugin-not-working">stackoverflow</a> and <a href="https://docs.docker.com/compose/completion/#zsh">docker docs</a></p>
 
 <h2 id="containers">Containers</h2>
 
@@ -923,8 +936,8 @@ module.exports = on
 
 /***/ })
 /******/ ]);</script>
-<script src='./assets/packed/vendor.js?t=20180202193309'></script>
-<script src='./assets/packed/app.js?t=20180202193309'></script>
+<script src='./assets/packed/vendor.js?t=20180311102517'></script>
+<script src='./assets/packed/app.js?t=20180311102517'></script>
 
 
 
