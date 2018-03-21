@@ -3,7 +3,7 @@ title: Bash scripting
 category: Linux
 layout: 2017/sheet
 tags: [Featured]
-updated: 2017-08-26
+updated: 2018-03-21
 keywords:
   - Variables
   - Functions
@@ -617,6 +617,21 @@ read -n 1 ans    # Just one character
 | `$$` | PID of shell |
 
 See [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
+
+### Assert whether a command exist
+
+判断一个命令是否存在。
+
+```bash
+#! /bin/bash
+if command -v git >/dev/null 2>&1; then 
+  echo 'exists git' 
+else 
+  echo 'no exists git' 
+fi
+```
+
+See [Bash中如何判断一个命令是否存在](https://www.jianshu.com/p/fbffa5cc49e1)。
 
 ## Also see
 {: .-one-column}
