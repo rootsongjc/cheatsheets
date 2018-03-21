@@ -100,11 +100,11 @@
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20180311102517'
+'./assets/2017/style.css?t=20180321112231'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20180311102517'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20180321112231'>
 </noscript>
 
 <script type='application/ld+json'>
@@ -1003,6 +1003,20 @@ echo $ans
 
 <p>See <a href="http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables">Special parameters</a>.</p>
 
+<h3 id="assert-whether-a-command-exist">Assert whether a command exist</h3>
+
+<p>判断一个命令是否存在。</p>
+
+<pre><code class="language-bash">#! /bin/bash
+if command -v git &gt;/dev/null 2&gt;&amp;1; then 
+  echo 'exists git' 
+else 
+  echo 'no exists git' 
+fi
+</code></pre>
+
+<p>See <a href="https://www.jianshu.com/p/fbffa5cc49e1">Bash中如何判断一个命令是否存在</a>。</p>
+
 <h2 class="-one-column" id="also-see">Also see</h2>
 
 <ul>
@@ -1714,8 +1728,8 @@ module.exports = on
 
 /***/ })
 /******/ ]);</script>
-<script src='./assets/packed/vendor.js?t=20180311102517'></script>
-<script src='./assets/packed/app.js?t=20180311102517'></script>
+<script src='./assets/packed/vendor.js?t=20180321112231'></script>
+<script src='./assets/packed/app.js?t=20180321112231'></script>
 
 
 
