@@ -473,6 +473,17 @@
   "tags": null,
   "updated": "2017-11-19"
 },{
+  "id": "vagrant",
+  "title": "Vagrant",
+  "url": "/vagrant",
+  "category": "Linux",
+  "keywords": null,
+  "content_html": "<h2 id=\"vagrant\">Vagrant</h2>\n\n<h3 class=\"-three-column\" id=\"copy-local-file-to-vm\">Copy local file to VM</h3>\n\n<pre><code class=\"language-Yaml\">tar cz --directory . &lt;filename&gt; | vagrant ssh &lt;hostname&gt; -- 'tar xzf -'\n</code></pre>\n\n<p>See <a href=\"https://gist.github.com/dergachev/5935044\">Vagrant SCP</a>.</p>",
+  "intro_html": "",
+  "description_html": "",
+  "tags": ["Featured"],
+  "updated": "2018-04-23"
+},{
   "id": "vim",
   "title": "Vim",
   "url": "/vim",
