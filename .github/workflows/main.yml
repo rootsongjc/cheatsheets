@@ -10,7 +10,7 @@ jobs:
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && gem install bundler:1.11.2 && jekyll build --future"
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
