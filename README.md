@@ -1,6 +1,6 @@
 # Cheatsheets
 
-Curated cheatsheets for developers 👉 ✨ https://jimmysong.io/cheatsheets ✨
+Curated cheatsheets for developers 👉 ✨ <https://jimmysong.io/cheatsheets/> ✨
 
 **Home page**
 
@@ -10,6 +10,6 @@ Curated cheatsheets for developers 👉 ✨ https://jimmysong.io/cheatsheets ✨
 
 ![screenshot](_docs/images/screenshot.jpg)
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for developer notes.
+See [CONTRIBUTING](CONTRIBUTING.md) for developer notes.
 
 Theme by [devhints](https://devhints.io).
