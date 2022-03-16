@@ -6,9 +6,7 @@ update: _site critical
 
 # Builds _site
 site:
-	docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+	bundle exec jekyll build
 
 # Builds critical path CSS/JS
 critical: _site
